@@ -24,7 +24,13 @@
         connection, content-decoding, content-length, etc. Most notably, you will see that
         the server has a favicon.ico file with the OSU icon displaying on the title.
     </p>
-    <p></p>
+    <p>When one inspects the files in the Web Dev/Inspector Network tab, you will see that
+        the html response code is 200, as espected, as that code lets us know the file request
+        was successfully retreived. However, the same cannot be said for the css and js files.
+        Despite the source file being referenced in the head-section above, the files do not 
+        exits, thus, the 404 code message is returned which means that our URL attempted to
+        search for the files but nothing was found.
+    </p>
     <p>The following is a component breakdown of this file's URL: https://web.engr.oregonstate.edu/~gochezjo/a1-gochezjo.
         Our scheme, which identifies the protocol used to send the request is: "https". The subdomain, which is an
         additional directory appended by the host name to help narrow down the search, is : "web.engr." The host name, 
