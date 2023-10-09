@@ -8,35 +8,89 @@
     <title>Jovanny Gochez</title>
 </head>
 <body>
-    <h1>Jovanny Gochez</h1>
-    <h2>Web Dev Concepts</h2>
-    <p>The HTML file "index.html"--sometimes "default.html"--is the conventional
-        homepage used for web servers. This file is called the designated homepage
-        which is the directory where the web server will take you when the "/" request 
-        is made. This convention can transcend page format where, in addition to 
-        index.html, you will see index.js and index.php used as well.
-    </p>
-    <p>When comparing the content in the Web Dev/Inspector Network tab between the local
-        and web server noticeable differences are found. You will first notice that after
-        clicking on the "index.html" file, the server has a substantial amount of information
-        under the Request and Respond Header that the local file does not have such as age, 
-        connection, content-decoding, content-length, etc. Most notably, you will see that
-        the server has a favicon.ico file with the OSU icon displaying on the tab.
-    </p>
-    <p>When one inspects the files in the Web Dev/Inspector Network tab, you will see that
-        the HTML response code is 200, as expected, as that code lets us know the file request
-        was successfully retrieved. However, the same cannot be said for the CSS and JS files.
-        Despite the source files being referenced in the head-section above, the files do not 
-        exist, thus, the 404 code is returned which means that our URL attempted to
-        search for the files, but nothing was found.
-    </p>
-    <p>The following is a component breakdown of this file's URL: https://web.engr.oregonstate.edu/~gochezjo/a1-gochezjo.
-        Our scheme, which identifies the protocol used to send the request, is: "https". The subdomain, which is an
-        additional directory appended by the host name, to help narrow down the search, is : "web.engr." The host name, 
-        which is the name of the host/server name of the machine which carries the desired content which we are attempting
-        to connect to, is: "oregonstate.edu". Finally, our resource path, which is the path through the directory and folders
-        that gets us to the desired file, is "~gochezjo/a1-gochezjo". In addition, while our URL does not include the root file,
-        it is implied: "index.html".
-    </p>
+    <header>
+        <h1>Jovanny Gochez</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Web Dev Concepts</h2>
+            <article>
+                <h3>Web Servers</h3>
+                <p>The HTML file <strong>"index.html"</strong>--sometimes "default.html"--is the conventional
+                    homepage used for web servers. This file is called the <strong>designated homepage</strong>
+                    which is the directory where the web server will take you when the <strong>"/" </strong>
+                    request is made. This convention can transcend page format where, in addition to 
+                    index.html, you will see other languages use the same covention such as <strong>index.js</strong>
+                    and <strong>index.php</strong> used as well.
+                </p>
+                <p>When comparing the content in the <strong>Web Dev/Inspector Network</strong> tab between the local
+                    and web server noticeable differences are found. You will first notice that after
+                    clicking on the "index.html" file, the server has a substantial amount of information
+                    under the <strong>Request</strong> and <strong>Respond Header</strong> that the local file does 
+                    not have such as <strong>age</strong>, <strong>connection</strong>, <strong>content-decoding</strong>
+                    <strong>content-length</strong>, etc. Most notably, you will see that the server has a <strong>favicon.ico</strong>
+                    file with the OSU icon displaying on the tab.
+                </p>
+                <p>When one inspects the files in the Web Dev/Inspector Network tab, you will see that
+                    the HTML response code is <strong>200</strong>, as expected, as that code lets us know the file request
+                    was successfully retrieved. However, the same cannot be said for the CSS and JS files.
+                    Despite the source files being referenced in the head-section above, the files do not 
+                    exist, thus, the <strong>404</strong> code is returned which means that our URL attempted to
+                    search for the files, but nothing was found.
+                </p>
+                <p>The following is a component breakdown of this file's <strong>URL</strong>: https://web.engr.oregonstate.edu/~gochezjo/a2-gochezjo.
+                    Our <strong>scheme</strong>, which identifies the protocol used to send the request, is: "https". The <strong>subdomain</strong>, 
+                    which is an additional directory appended by the host name, to help narrow down the search, is : "web.engr." The <strong>host name</strong>,
+                    which is the name of the host/server name of the machine which carries the desired content which we are attempting
+                    to connect to, is: "oregonstate.edu". Finally, our <strong>resource path</strong>, which is the path through the directory and folders
+                    that gets us to the desired file, is "~gochezjo/a2-gochezjo". In addition, while our URL does not include the <strong>root file</strong>,
+                    it is implied: "index.html".
+                </p>
+            </article>
+            <article>
+                <h3>Frontend Design</h3>
+                <p>The concept of <strong>frontend design </strong>frontend design focuses around the user's experience in using any 
+                    given program, application, webpage, etc. One of the pivotal features of frontend design is the visual and interactive 
+                    design of a page, also known as the <strong>graphical user-interface (GUI)</strong>. These designs can include icons or images decorated 
+                    with fonts and colors that helps the user assimilate themselves to the page and quickly grasps its functionalities, and 
+                    of course, enjoy the experience.Frontend design can be further broken down into what engineers have called the <strong>
+                    five "E"'s of Usability</strong>:
+                    
+                </p>
+                <dl>
+                    <dt>Effective</dt>
+                    <dd>- an effective page is one where the overall design yields the correct functionality that leads one 
+                        to receive the correct information, destination, and overall expecation.
+                    </dd>
+                    <dt>Efficiency</dt>
+                    <dd>- an efficient page isn't just one that works, but it's one which is designed to help the user get to their
+                        desired goal in the least amount of steps and quickest time possible.
+                    </dd>
+                    <dt>Ease of Navigation</dt>
+                    <dd>- arguably one of the most important features is the ability to design a page with the most user-friendly 
+                        interface. This page's accessability would make even a newcomer's first experience in navigating the path's 
+                        of the page to their destination as seemless as possible and easy to repeat.
+                    </dd>
+                    <dt>Error-free</dt>
+                    <dd>- an error-free page is one where the designer has figured out common logical and technical roadblocks and issues 
+                        that user's may run into and designed the page to help the user avoic them. Edge cases can be real thorns on 
+                        the developer's side that could be the cause of bad feedback.
+                    </dd>
+                    <dt>Enjoyable</dt>
+                    <dd>- finally, whether a developer is dealing with a competitive market or with a community that requires certain services,
+                        the final touch to any page and arguably the factor that will make users come back is the enjoyability of the experience.
+                        This includes the effectiveness of the previous <em>four</em> "E"s and any additional visual and interactive designs that
+                        makes the experience memorable and even desirable.
+                    </dd>
+                </dl>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; 2023 Jovanny Gochez
+        </p>
+    </footer>
+    
 </body>
 </html>
