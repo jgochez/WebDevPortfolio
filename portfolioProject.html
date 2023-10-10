@@ -142,6 +142,47 @@
                 <p>The div tag is primarily used as a placeholder, whether for stand alone information or for visual spacing of content. It has no style
                     or dimension, it is truly just a placeholder when no other appropriate tag exists.
                 </p>
+                <h4>How <strong>anchors</strong> link to:</h4>
+                <ol>
+                    <li>
+                        <strong>External Content</strong>: one must use the external content's URL within the anchor tag &lt;a&gt;. You must also include 
+                        a description of the URL within the anchor tag which will be displayed with blue font to the user to point out it is a link. The following
+                        is an example of how this looks in HTML (note: words in bold are the only things the user needs to modify): 
+                        <em>&lt;a href="<strong>https://developer.mozilla.org/en-US/</strong>"&gt; 
+                        <strong>MDN's Developer Website</strong>&lt;/a&gt;</em>
+                    </li>
+
+                    <li>
+                        <strong>Internal Content</strong>: the tag where the desired content is at--where we plan to navigate to--must be given an ID. The 
+                        user then uses an anchor tag identically to that appearing above in external content, where the only difference lies in
+                        replacing the URL with a "#" followed directly by the ID found in the desired tag. Here is an example of the both the tag where the ID 
+                        and thus location is created followed by the anchor tag that takes us there (note: words in bold are the only 
+                        things the user needs to modify):
+                        <em>&lt;article id="<strong>topic</strong>"&gt;<strong>The content for this topic...</strong>&lt;/article&gt;</em>
+                        <em>&lt;a href="#<strong>topic</strong>" &gt;<strong>Topic</strong>&lt;/a&gt;</em>
+                    </li>
+
+                    <li>
+                        <strong>Page-to-Page</strong>: 
+                        <ol>
+                            <li>
+
+                            </li>
+
+                            <li>
+                                
+                            </li>
+                            
+                            <li>
+                                
+                            </li>
+
+
+                        </ol>
+
+
+                    </li>
+                </ol>
             </article>
         </section>
     </main>
