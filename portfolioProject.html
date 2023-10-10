@@ -84,6 +84,64 @@
                         makes the experience memorable and even desirable.
                     </dd>
                 </dl>
+                <h4>Purpose of Page Layout Tags</h4>
+
+                <h5>&lt;Header&gt;</h5>
+                <p>The header tag represents the page banner that introduces the page and its most basic biographical information such as the 
+                    name, purpose, and slogan, etc. The convention is to keep this as small as possible and appear throughout every internal 
+                    page.
+                </p>
+
+                <h5>&lt;nav&gt;</h5>
+                <p>Short for navigation, this tag takes you from the current page to the page link attached to this tag. It is common for 
+                    these tags to take you to the page's main menu, contacts, etc.
+                </p>
+
+                <h5>&lt;main&gt;</h5>
+                <p>This tag will be the block that holds the primary information and content of the page. Because of this vital role it 
+                    is a distinct tag to the section tag below.
+                </p>
+
+                <h5>&lt;section&gt;</h5>
+                <p>The content of a page may be extensive, so a way to organize the content thematically is through the section tag. Typically
+                    you will have each section starting off with a headline &lt;h1&gt; describing the section. 
+                </p>
+
+                <h5>&lt;article&gt;</h5>
+                <p>When the &lt;section&gt; tag has been deployed and more content related to this specific section exists, it is good practice
+                    to organize this content with article tags within the section. Just as the section tag, the article tag should be started off
+                    with a headline, however, of lower grade: &lt;h2&gt;. If multiple articles exist, its a great heuristic to have these tags
+                    labeled with an ID selector (<em>#topic</em>) to allow a nav tab to link to that particular article.
+                </p>
+
+                <h5>&lt;aside&gt;</h5>
+                <p>Used as a supplement to an article, the aside tag will typically float on the sides with a distinct style but relatable
+                    content.
+                </p>
+
+                <h5>&lt;figure&gt;</h5>
+                <p>Similar to the aside tag, the figure tag will supplement an article with some related media, whether an image, gif, etc. This
+                    supplemental media will be tagged with &lt;img&gt; and &lt;figcaption&gt; tags, with the name of the tags describing their
+                    purpose all within the figure tag.
+                </p>
+
+                <h5>&lt;blockquote&gt;</h5>
+                <p>While text is usually displayed with a &lt;p&gt; such as the tags that are currently displaying this paragraph you are reading,
+                    when the text is extensive it is recommended to use the blockquote tag. It is also visually different to emphasize its disctinct
+                    length which comes typically with a purpose in mind from the standpoint of the page. This tag will include two other tags:
+                    quote &lt;q&gt; and citation &lt;cite&gt;, which go within the blockquote tag.
+                </p>
+
+                <h5>&lt;footer&gt;</h5>
+                <p>Typically the last bit of content one sees at the very end of the page. The convential purpose is to display the copyright, year of
+                    publication and owner's name. You will also see legal and contact information with links to relevant and important pages. One will need 
+                    to use ASCII entities to display particular symbols not found in a traditional keyboard.
+                </p>
+
+                <h5>&lt;div&gt;</h5>
+                <p>The div tag is primarily used as a placeholder, whether for stand alone information or for visual spacing of content. It has no style
+                    or dimension, it is truly just a placeholder when no other appropriate tag exists.
+                </p>
             </article>
         </section>
     </main>
