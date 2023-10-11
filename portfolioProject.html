@@ -93,8 +93,8 @@
                 </p>
 
                 <h5>&lt;nav&gt;</h5>
-                <p>Short for navigation, this tag takes you from the current page to the page link attached to this tag. It is common for 
-                    these tags to take you to the page's main menu, contacts, etc.
+                <p>Short for navigation, this tag takes us from the current page to the page link attached to this tag. It is common for 
+                    these tags to take us to the page's main menu, contacts, etc.
                 </p>
 
                 <h5>&lt;main&gt;</h5>
@@ -104,7 +104,7 @@
 
                 <h5>&lt;section&gt;</h5>
                 <p>The content of a page may be extensive, so a way to organize the content thematically is through the section tag. Typically
-                    you will have each section starting off with a headline &lt;h1&gt; describing the section. 
+                    we will have each section started off with a headline &lt;h1&gt; describing the section. 
                 </p>
 
                 <h5>&lt;article&gt;</h5>
@@ -126,7 +126,7 @@
                 </p>
 
                 <h5>&lt;blockquote&gt;</h5>
-                <p>While text is usually displayed with a &lt;p&gt; such as the tags that are currently displaying this paragraph you are reading,
+                <p>While text is usually displayed with a &lt;p&gt; such as the tags that are currently displaying this paragraph we are reading,
                     when the text is extensive it is recommended to use the blockquote tag. It is also visually different to emphasize its disctinct
                     length which comes typically with a purpose in mind from the standpoint of the page. This tag will include two other tags:
                     quote &lt;q&gt; and citation &lt;cite&gt;, which go within the blockquote tag.
@@ -134,7 +134,7 @@
 
                 <h5>&lt;footer&gt;</h5>
                 <p>Typically the last bit of content one sees at the very end of the page. The convential purpose is to display the copyright, year of
-                    publication and owner's name. You will also see legal and contact information with links to relevant and important pages. One will need 
+                    publication and owner's name. We will also see legal and contact information with links to relevant and important pages. One will need 
                     to use ASCII entities to display particular symbols not found in a traditional keyboard.
                 </p>
 
@@ -145,7 +145,7 @@
                 <h4>How <strong>anchors</strong> link to:</h4>
                 <ol>
                     <li>
-                        <strong>External Content</strong>: one must use the external content's URL within the anchor tag &lt;a&gt;. You must also include 
+                        <strong>External Content</strong>: one must use the external content's URL within the anchor tag &lt;a&gt;. We must also include 
                         a description of the URL within the anchor tag which will be displayed with blue font to the user to point out it is a link. The following
                         is an example of how this looks in HTML (note: words in bold are the only things the user needs to modify): 
                         <em>&lt;a href="<strong>https://developer.mozilla.org/en-US/</strong>"&gt; 
@@ -163,24 +163,35 @@
                     </li>
 
                     <li>
-                        <strong>Page-to-Page</strong>: 
+                        <strong>Page-to-Page</strong>: the most common way to navigate from page-to-page is to create <strong>relative paths</strong>. More 
+                        importantly, we create a relative URL which creates a path to a page relative to the current page. The following three paths can be 
+                        created:
                         <ol>
                             <li>
-
+                                <strong>Same directory</strong>: The simplest way of navigating between pages is if the navigation occurs between the same directory. 
+                                To do this we reference the page we are looking for and use that name as the relative URL. For example, if we have two files within
+                                the same directory--contacts.html and index.html--and we are attempting to create a path from contacts.html to index.html, we simply 
+                                write: <em><strong>index.html</strong></em>
                             </li>
 
                             <li>
-                                
+                                <strong>Down the child directory</strong>: If we are in a directory and are attempting to access a page that is within a folder
+                                that is in the same directory as we are, the path we create is by accessing the desired folder in the directory and finally accessing
+                                the page within that folder. Our relative URL will begin with the folder's name,followed by "/" (which signifies
+                                the user <em>accessing</em> the folder), and finally the name of the page inside the folder. So if we are attempting to access page 
+                                "index.html" that is inside folder "product", a folder that is in the same directory as our current page, the URL would look like this:
+                                 <em><strong>product/index.html</strong></em>
                             </li>
-                            
+
                             <li>
+                                <strong>Up the parent directory</strong>: If we are trying to navigate to a page that requires us to <em>exit</em> our folder into a 
+                                parent directory to then <em>enter</em> a different folder to finally access our desired page, we must use the ".." symbol (which signifies <em>
+                                exiting</em> a folder, in contrast with "/" which signifies <em>entering</em>). Furthermore, if we have a directory with two folder: homepage
+                                and contacts--and we are inside the homepage folder in page index.html, and we are trying to navigate to contacts.html--which is found
+                                inside the contacts folder--we would write the following URL: <em><strong>../contacts/contacts.html</strong></em>
                                 
                             </li>
-
-
                         </ol>
-
-
                     </li>
                 </ol>
             </article>
