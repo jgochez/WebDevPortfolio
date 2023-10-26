@@ -1,0 +1,9 @@
+brass: #88833D <-- accent
+grey: #5A5D66
+teal: #69878C
+baby_blue: #C1D4D9
+forest_green: #41633C
+ - light_green: #91DB86
+ - dark_green: #3B5936
+
+grey_transp: rgba(193, 212, 217, .5)
