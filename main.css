@@ -10,19 +10,25 @@
 
 /*   ----- Variables  -----  */
 :root {
-    --custom-color-name:;
-    --custom-embellishment-name:;
+    --brass: #88833D; /* accent */
+    --grey: #5A5D66;
+    --teal: #427175;
+    --baby_blue: #B6D4D9;
+    --forest_green: #41633C;
+    --light_green: #91DB86;
+    --dark_green: #3B5936;
+    --teal_transp: rgba(66, 113, 117, .5);
   }
   
   /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
   body {       /* Can alternatively define in html {}. */
-    background-color:;
-    background-image:;
-    color:;
-    font-family:; /* Define with at least one font name and its related generic family name.*/
-    margin:;
-    padding:;
-    max-width:;
+    /* background-color:; */
+    background-image: url(images/trail_hike_woods.jpeg);
+    color:var(--dark_green);
+    font-family: 'Roboto', sans-serif; /* Define with at least one font name and its related generic family name.*/
+    margin:0 auto;
+    padding:0;
+    max-width:1200px;
   }
   
   /*  ----- Page layout blocks -----  */

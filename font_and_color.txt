@@ -1,13 +1,13 @@
-brass: #88833D <-- accent
-grey: #5A5D66
-teal: #427175
-baby_blue: #B6D4D9
-forest_green: #41633C
- - light_green: #91DB86
- - dark_green: #3B5936
-teal_transp: rgba(66, 113, 117, .5)
+--brass: #88833D /* accent */
+--grey: #5A5D66
+--teal: #427175
+--baby_blue: #B6D4D9
+--forest_green: #41633C
+--light_green: #91DB86
+--dark_green: #3B5936
+--teal_transp: rgba(66, 113, 117, .5)
 
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Roboto:wght@100;300&display=swap');
 
-font-family: 'Exo 2', sans-serif;
-font-family: 'Roboto', sans-serif;
+font-family: 'Exo 2', sans-serif; <-- Headline
+font-family: 'Roboto', sans-serif; <-- Weight-text
