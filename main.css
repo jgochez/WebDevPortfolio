@@ -25,7 +25,7 @@
     /* background-color:; */
     background-size: cover;
     background-attachment: fixed;
-    background-position: top left;
+    background-position: top right;
     background-repeat: no-repeat;
     background-image: url(images/trail_hike_woods.jpeg);
     color:var(--dark_green);
