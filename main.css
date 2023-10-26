@@ -6,7 +6,7 @@
   /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
   /* @import "component1.css";   Component-specific stylesheets, if any.   */
   /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
-
+  @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Roboto:wght@100;300&display=swap');
 
 /*   ----- Variables  -----  */
 :root {
@@ -174,14 +174,21 @@
   .gradient {}
   .shape {} 
   */
+  
+  /*
   @keyframes App-logo {}
-  
+  */
   /*   ===== TABLET  media query overrides mobile styles ===== */
+  /*
   @media all and (min-width: 600px) {}
-  
+  */
   /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  /*
   @media all and (min-width: 1080px) {}
-  
+  */
   /*   ===== PRINT  media query overrides previous styles =====  */
+  /*
   @media print {}
+  */
+  
   
