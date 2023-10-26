@@ -25,14 +25,14 @@
     /* background-color:; */
     background-size: cover;
     background-attachment: fixed;
-    background-position: top right;
+    background-position: top left;
     background-repeat: no-repeat;
     background-image: url(images/trail_hike_woods.jpeg);
     color:var(--dark_green);
     font-family: 'Roboto', sans-serif; /* Define with at least one font name and its related generic family name.*/
     margin:0 auto;
     padding:0;
-    max-width:800px;
+    max-width:600px;
   }
   
   /*  ----- Page layout blocks -----  */
