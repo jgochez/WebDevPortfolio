@@ -59,12 +59,18 @@ header, footer {
 }
 
 footer p {
+
     background-color: var(--light_grey_transp);
     border-radius: 10px 0 10px 0;
     border: 2px solid var(--brass);
     font-weight: bold;
     padding: 10px 5px 10px 5px;
 }
+
+footer {
+    clear:both;
+}
+
 section {
     border-style: solid;
     border-width: 3px;
@@ -93,7 +99,7 @@ h2 {
     height: 64px;
     width: 64px;
   }
-  
+  /***************************************/
   nav{
     display: flex;
     justify-content: center;
@@ -142,43 +148,33 @@ h2 {
     font-family: 'Exo 2', sans-serif; 
   } 
 
-.gallery-section {
-    margin: 1%;
-    padding: 2.5%;
-}
-
+/***************************************/
 .gallery {
+    margin-left: 22%;
+    display: flex;
+    flex-flow: row wrap;
     border-style: none;
     padding: 2%;
     color: var(--forest_green);
-    margin-left: 10%;
+    overflow: hidden;
+
 }
-
-figure {
-    border-style: solid;
-    border-width: 3px;
-    border-color: var(--grey) ;
-    margin: 1%;
-    padding: 2.5%;
+  .gallery figure {
+    max-width:30%;
+    border: 1px solid var(--brass);
+    margin:10px 50px 10px 0; 
   }
-
+  
   .gallery img {
-    border: 8px solid var(--brass);
-    margin-left: 9%;
-    margin-bottom: 3%;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
+    max-width:100%;
+    margin:0;
+    padding:0;
   }
 
-  figcaption {
-    color: var(--forest_green);
-    font-size: 1em;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
+  .gallery figcaption {
+    padding:3px;
   }
+
   /* ----- Anchors ----- Text links */
   /*
   a {}
@@ -309,8 +305,17 @@ figure {
   @keyframes App-logo {}
   
   /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 750px) {}
   
-  @media all and (min-width: 600px) {}
+  @media all and (max-width: 750px) {
+    .local-nav {
+        flex-direction: column;
+    }
+    .local-nav a{
+        margin: 10px 0;
+    }
+
+  }
   
   /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
   
