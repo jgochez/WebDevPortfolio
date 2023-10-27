@@ -164,7 +164,6 @@ h2 {
     border: 1px solid var(--brass);
     margin:10px 50px 10px 0; 
   }
-  
   .gallery img {
     max-width:100%;
     margin:0;
@@ -307,7 +306,7 @@ h2 {
   /*   ===== TABLET  media query overrides mobile styles ===== */
   @media all and (min-width: 750px) {}
   
-  @media (max-width: 750px) {
+  @media all and (max-width: 750px) {
     .local-nav {
         flex-direction: column;
     }
