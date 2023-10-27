@@ -16,10 +16,11 @@
     --light_grey_transp: rgba(209, 216, 237, .85);
     --teal: #427175;
     --baby_blue: #B6D4D9;
+    --baby_blue_transp: rgba(182, 212, 217, .70);
     --forest_green: #41633C;
-    --light_green: #91DB86;
+    --light_green: #9dc696;
     --dark_green: #344F30;
-    --teal_transp: rgba(66, 113, 117, .5);
+    --teal_transp: rgba(66, 113, 117, .70);
   }
   
   /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
@@ -29,7 +30,7 @@
     background-position: top left;
     background-repeat: no-repeat;
     background-image: url(images/trail_hike_woods.jpeg);
-    color:var(--dark_green);
+    color:var(--forest_green);
     font-family: 'Roboto', sans-serif; /* Define with at least one font name and its related generic family name.*/
     font-size: 1em;
     line-height: 1;
@@ -42,26 +43,33 @@
   
 header, section, article, footer {
     background-color: var(--light_grey_transp);
-    margin: 0;
+    color: var(--forest_green);
+    border-radius: 10px;
+    margin: 1%;
     padding: 2%;
 }
 
 header, footer {
+    background-color: var(--baby_blue_transp);
     border-style: solid;
     border-width: 3px;
     border-color: var(--brass) ;
 }
 
+footer p {
+    background-color: var(--light_grey_transp);
+    border-radius: 10px 0 10px 0;
+    border: 2px solid var(--brass);
+    font-weight: bold;
+    padding: 10px 5px 10px 5px;
+}
 section {
     border-style: solid;
     border-width: 3px;
-    border-color: var(--brass) ;
-    margin: 1%;
-    padding: 2.5%;
+    border-color: var(--brass);
 }
 
 article {
-    margin: 2%;
     padding: 20px;
     width: 650px;
     box-sizing: border-box; 
@@ -73,12 +81,103 @@ h1, footer {
     justify-content: center;
   }
 
+h2 {
+    margin-left: 2%;
+}
   #hero-image {
     margin-left: 45%;
     height: 64px;
     width: 64px;
   }
   
+  nav{
+    display: flex;
+    justify-content: center;
+  }
+
+  .local-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .local-nav a{
+    text-align: left;
+    border-radius: 5px;
+    border: 2px solid var(--teal);
+    font-size: 1em;
+    padding: 3px 15px;
+    margin: 1%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .local-nav li{
+    margin-bottom: 20px;
+  }
+ 
+  nav a {
+    background-color: var(--light_grey_transp);
+    border: 2px solid var(--brass);
+    border-radius: 10px;
+    color: var(--forest_green);
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-right: 3px;
+    padding: 5px 20px;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    background-color: var(--baby_blue_transp);
+    color: var(--dark_green);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Exo 2', sans-serif; 
+  } 
+
+.gallery-section .gallery {
+    border-style: none;
+}
+
+.gallery-section {
+    margin: 1%;
+    padding: 2.5%;
+}
+
+.gallery {
+    padding: 2%;
+    color: var(--forest_green);
+    margin-left: 10%;
+    font-size: 1em;
+    border: 8px solid var(--brass);
+}
+
+figure figcaption{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+figure {
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--brass) ;
+    margin: 1%;
+    padding: 2.5%;
+  }
+
+  .gallery img {
+    border: 8px solid var(--brass);
+    margin-left: 9%;
+    display: flex;
+    justify-content: center;
+  }
+
+  figcaption {
+    color: var(--forest_green);
+    font-size: 1.3em;
+  }
   /* ----- Anchors ----- Text links */
   /*
   a {}
@@ -89,43 +188,6 @@ h1, footer {
   */
   /*  ----- Navigation ----- Override text links for navigation only.  */
   
-  nav{
-    text-align: center;
-  }
-
-  .local-nav {
-    text-align: left;
-  }
-
-  .local-nav a{
-    border-radius: 5px;
-    border: 2px solid var(--teal);
-    font-size: 1em;
-    padding: 3px 15px;
-    text-decoration: none;
-  }
-  .local-nav li{
-    margin-bottom: 20px;
-  }
- 
-  nav a {
-    background-color: var(--light_grey_transp);
-    border: 2px solid var(--brass);
-    border-radius: 5px 5px 0 0;
-    color: var(--forest_green);
-    font-size: 1.3em;
-    font-weight: bold;
-    margin-right: 3px;
-    padding: 5px 20px;
-    text-decoration: none;
-
-  }
-  nav a:hover {
-    background-color: var(--teal);
-    color: var(--dark_green);
-  }
-  
-  
   /*  -----  Typography  ----- */
   /*
   p {}
@@ -134,11 +196,6 @@ h1, footer {
   li {}
   dt {}
   dd {}
-  */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Exo 2', sans-serif; 
-  } 
-  /*
   h1 {}
   h2 {}
   h3 {}
