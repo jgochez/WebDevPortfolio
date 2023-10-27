@@ -40,15 +40,17 @@
   }
   
   /*  ----- Page layout blocks -----  */
-  
-header, section, article, footer {
+
+header, main, section, article, footer{
     background-color: var(--light_grey_transp);
     color: var(--forest_green);
     border-radius: 10px;
-    margin: 1%;
+    margin: 1% auto;
     padding: 2%;
 }
-
+main{
+    border: 2px solid var(--brass);
+}
 header, footer {
     background-color: var(--baby_blue_transp);
     border-style: solid;
@@ -70,9 +72,10 @@ section {
 }
 
 article {
+    margin: 0, auto;
     margin-left: 8%;
     padding: 20px;
-    width: 650px;
+    max-width: 650px;
     box-sizing: border-box; 
     border: 3px solid var(--brass);  
 }
