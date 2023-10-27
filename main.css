@@ -307,7 +307,7 @@ h2 {
   /*   ===== TABLET  media query overrides mobile styles ===== */
   @media all and (min-width: 750px) {}
   
-  @media all and (max-width: 750px) {
+  @media (max-width: 750px) {
     .local-nav {
         flex-direction: column;
     }
