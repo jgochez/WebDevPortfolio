@@ -12,17 +12,18 @@
 :root {
     --brass: #88833D; /* accent */
     --grey: #5A5D66;
+    --light_grey: #D1D8ED;
+    --light_grey_transp: rgba(209, 216, 237, .85);
     --teal: #427175;
     --baby_blue: #B6D4D9;
     --forest_green: #41633C;
     --light_green: #91DB86;
-    --dark_green: #3B5936;
+    --dark_green: #344F30;
     --teal_transp: rgba(66, 113, 117, .5);
   }
   
   /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
   body {       /* Can alternatively define in html {}. */
-    /* background-color:; */
     background-size: cover;
     background-attachment: fixed;
     background-position: top left;
@@ -30,23 +31,54 @@
     background-image: url(images/trail_hike_woods.jpeg);
     color:var(--dark_green);
     font-family: 'Roboto', sans-serif; /* Define with at least one font name and its related generic family name.*/
+    font-size: 1em;
+    line-height: 1;
     margin:0 auto;
-    padding:0;
-    max-width:600px;
+    padding:2%;
+    max-width:850px;
   }
   
   /*  ----- Page layout blocks -----  */
-  /*
-  header {}
-  main {}
-  section {}
-  article {}
-    #topic1 {}
-    #topic2 {}
-  div {}
-  aside {}
-  footer {}
-  */
+  
+header, section, article, footer {
+    background-color: var(--light_grey_transp);
+    margin: 0;
+    padding: 2%;
+}
+
+header, footer {
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--brass) ;
+}
+
+section {
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--brass) ;
+    margin: 1%;
+    padding: 2.5%;
+}
+
+article {
+    margin: 2%;
+    padding: 20px;
+    width: 650px;
+    box-sizing: border-box; 
+    border: 3px solid var(--brass);  
+}
+
+h1, footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  #hero-image {
+    margin-left: 45%;
+    height: 64px;
+    width: 64px;
+  }
+  
   /* ----- Anchors ----- Text links */
   /*
   a {}
@@ -56,11 +88,43 @@
   a:visited {}
   */
   /*  ----- Navigation ----- Override text links for navigation only.  */
-  /*
-  nav {}
-  nav a {}
-  nav a:hover {}
-  */
+  
+  nav{
+    text-align: center;
+  }
+
+  .local-nav {
+    text-align: left;
+  }
+
+  .local-nav a{
+    border-radius: 5px;
+    border: 2px solid var(--teal);
+    font-size: 1em;
+    padding: 3px 15px;
+    text-decoration: none;
+  }
+  .local-nav li{
+    margin-bottom: 20px;
+  }
+ 
+  nav a {
+    background-color: var(--light_grey_transp);
+    border: 2px solid var(--brass);
+    border-radius: 5px 5px 0 0;
+    color: var(--forest_green);
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-right: 3px;
+    padding: 5px 20px;
+    text-decoration: none;
+
+  }
+  nav a:hover {
+    background-color: var(--teal);
+    color: var(--dark_green);
+  }
+  
   
   /*  -----  Typography  ----- */
   /*
@@ -70,15 +134,19 @@
   li {}
   dt {}
   dd {}
-  
-  h1, h2, h3, h4, h5, h6 {} 
+  */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Exo 2', sans-serif; 
+  } 
+  /*
   h1 {}
   h2 {}
   h3 {}
   h4 {}
   h5 {}
   h6 {}
-  
+  */
+  /*
   abbr {}
   acronym {}
   address {}
@@ -179,20 +247,20 @@
   .shape {} 
   */
   
-  /*
+  
   @keyframes App-logo {}
-  */
+  
   /*   ===== TABLET  media query overrides mobile styles ===== */
-  /*
+  
   @media all and (min-width: 600px) {}
-  */
+  
   /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
-  /*
+  
   @media all and (min-width: 1080px) {}
-  */
+  
   /*   ===== PRINT  media query overrides previous styles =====  */
-  /*
+  
   @media print {}
-  */
+  
   
   

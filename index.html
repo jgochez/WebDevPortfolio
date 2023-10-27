@@ -15,8 +15,8 @@
 </head>
 <body>
     <header>
-        <h1>
-            <img src="android-chrome-192x192.png">
+        <img src="android-chrome-192x192.png" id="hero-image">
+        <h1 id="hero-name">
             Jovanny Gochez
         </h1>
     </header>
@@ -28,7 +28,7 @@
     <main>
         <section>
             <h2>Web Dev Concepts</h2>
-            <nav class="local">
+            <nav class="local-nav">
                 <ul>
                     <li><a href="#servers">Web Servers</a></li>
                     <li><a href="#frontend">Frontend Design</a></li>
@@ -216,44 +216,44 @@
                     </li>
                 </ol>
             </article>
-            <article id="optimization"></article>
-            <h3>Optimizing images</h3>
-            <p>
-                There are six major specifications of images for the web. The first is a <strong>descriptive file name</strong>, whose importance is primarily 
-                based on the <em>search engine optimization (SEO)</em>. When one searches on the web for a file, bots will look for keywords to narrow down the 
-                search for the user. The more descriptive an image is, the higher the chance to find the image, and the more traffic your image gets. Because of
-                this reality, this specification is on the top of the list of important specifications. The second major specification is a <strong>small file size</strong>.
-                This specification should be quite self-explanatory. Smaller file sizes equals faster load time. There are also ways to <em>compress</em> the file
-                using two methods with the goal of smaller file sizes: <em>lossless</em> compression, which protects the quality of the image, but at the cost of a larger compressed image. 
-                <em>Lossy</em> compression will create a much smaller compressed file, but at the cost of its quality. The third specification is the <strong>
-                exact dimensions</strong>. This specification emphasizes the need to fit images in blocks that have a fixed size. Cropping and size reduction can 
-                modify the dimensions of an image to fit in this block. Fourth, the <strong>correct file format</strong>, which may appear trivial, is quite important
-                because each format will dictate how information in an image is stored and encoded with respect to its corresponding platform. For example, if 
-                you are dealing with two-dimensional, interactive images, you would use the <em>Scalable Vector Graphics (.SVG)</em> format, since SVG uses
-                mathematically-derived methods with XML to format the image. If you are using line-art, a format that handles 8-bit transparency and/or animations
-                would be used. Because <em>GIF</em> is a file format with a very limited number of colors and a low file size meant to handle simplistic imagery, 
-                this file format is ideal for line-art. In addition to GIF, <em>PNG</em> carries the advantage of lossless compression which is typically recommended 
-                for simple images such as line-art due to its ability to retain quality. PNG also supports transparency, which saves more space when dealing with images 
-                with a lot of empty space such as line-art.
-                On a different token, a format that can adequately handle photography will need a powerful compression ability to handle
-                the amount of detail that it would most likely carry and finally be able to leave the final cut in a rectangular shape. The file formats that would
-                be able to handle this task are <em>JPG</em> and <em>WebP</em>. The fifth specification is <strong>reduced resolution</strong>. Because most monitors are built 
-                to handle a specific range of resolution, to maximize the quality of an image it would be necessary to modify (typically reduce) the resolution to fit 
-                within the abilities of the monitor for image quality. Finally, the <strong>color mode</strong> is important because--well, aside from the fact that life would never 
-                be the same without color--each file format is compatible with a specific mode. Traditionally we have three types of modes: RGB, Hexadecimal, and HSL. However,
-                 when dealing with .PNG, .JPG, .SVG, and .WebP, we use RBG for its great balance of moderate file size and image quality.
-            </p>
-        </article>
-        <article id="favicons">
-            <h3>Favicons</h3>
-            <p>
-                Favicons are images that are placed on the browser tab with the purpose of providing visual information corresponding to the content found in the given file.
-                To use a favicon, one must create an image (simplicity recommended) which is then formatted into different file formats, typically .SVG and .PNG. Favicon
-                generators may often take your image sample and modify to a more optimal layout. Furthermore, because different devices may handle image quality at different 
-                success rates, different file formats are kept in the directory and picked up by the browser for selection based on optimal quality. Once the file formats have
-                been created, you create link tags in the HTML code that connects to these files and the browser will do the magic. 
-            </p>
-        </article>
+            <article id="optimization">
+                <h3>Optimizing images</h3>
+                <p>
+                    There are six major specifications of images for the web. The first is a <strong>descriptive file name</strong>, whose importance is primarily 
+                    based on the <em>search engine optimization (SEO)</em>. When one searches on the web for a file, bots will look for keywords to narrow down the 
+                    search for the user. The more descriptive an image is, the higher the chance to find the image, and the more traffic your image gets. Because of
+                    this reality, this specification is on the top of the list of important specifications. The second major specification is a <strong>small file size</strong>.
+                    This specification should be quite self-explanatory. Smaller file sizes equals faster load time. There are also ways to <em>compress</em> the file
+                    using two methods with the goal of smaller file sizes: <em>lossless</em> compression, which protects the quality of the image, but at the cost of a larger compressed image. 
+                    <em>Lossy</em> compression will create a much smaller compressed file, but at the cost of its quality. The third specification is the <strong>
+                    exact dimensions</strong>. This specification emphasizes the need to fit images in blocks that have a fixed size. Cropping and size reduction can 
+                    modify the dimensions of an image to fit in this block. Fourth, the <strong>correct file format</strong>, which may appear trivial, is quite important
+                    because each format will dictate how information in an image is stored and encoded with respect to its corresponding platform. For example, if 
+                    you are dealing with two-dimensional, interactive images, you would use the <em>Scalable Vector Graphics (.SVG)</em> format, since SVG uses
+                    mathematically-derived methods with XML to format the image. If you are using line-art, a format that handles 8-bit transparency and/or animations
+                    would be used. Because <em>GIF</em> is a file format with a very limited number of colors and a low file size meant to handle simplistic imagery, 
+                    this file format is ideal for line-art. In addition to GIF, <em>PNG</em> carries the advantage of lossless compression which is typically recommended 
+                    for simple images such as line-art due to its ability to retain quality. PNG also supports transparency, which saves more space when dealing with images 
+                    with a lot of empty space such as line-art.
+                    On a different token, a format that can adequately handle photography will need a powerful compression ability to handle
+                    the amount of detail that it would most likely carry and finally be able to leave the final cut in a rectangular shape. The file formats that would
+                    be able to handle this task are <em>JPG</em> and <em>WebP</em>. The fifth specification is <strong>reduced resolution</strong>. Because most monitors are built 
+                    to handle a specific range of resolution, to maximize the quality of an image it would be necessary to modify (typically reduce) the resolution to fit 
+                    within the abilities of the monitor for image quality. Finally, the <strong>color mode</strong> is important because--well, aside from the fact that life would never 
+                    be the same without color--each file format is compatible with a specific mode. Traditionally we have three types of modes: RGB, Hexadecimal, and HSL. However,
+                    when dealing with .PNG, .JPG, .SVG, and .WebP, we use RBG for its great balance of moderate file size and image quality.
+                </p>
+            </article>
+            <article id="favicons">
+                <h3>Favicons</h3>
+                <p>
+                    Favicons are images that are placed on the browser tab with the purpose of providing visual information corresponding to the content found in the given file.
+                    To use a favicon, one must create an image (simplicity recommended) which is then formatted into different file formats, typically .SVG and .PNG. Favicon
+                    generators may often take your image sample and modify to a more optimal layout. Furthermore, because different devices may handle image quality at different 
+                    success rates, different file formats are kept in the directory and picked up by the browser for selection based on optimal quality. Once the file formats have
+                    been created, you create link tags in the HTML code that connects to these files and the browser will do the magic. 
+                </p>
+            </article>
         </section>
     </main>
     <footer>
