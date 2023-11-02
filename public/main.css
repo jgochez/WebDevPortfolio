@@ -318,20 +318,20 @@ input {
 }
 
 textarea {
-  padding: 0;
+  padding: 2px;
   width: 92%;
   height: 250px;
 }
 
 :focus {
   border-radius: 10px 0 10px 0;
-
 }
 
-*::placeholder{
+input::placeholder{
   color: var(--baby_blue);
   font-size: 70%;
 }
+
 *:required {
   border: 2px solid green;
 }
