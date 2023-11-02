@@ -29,49 +29,56 @@
     <main>
         <section>   
             <h2>Contact</h2>
-            <p> * Required Fields</p>
             <article>
                 <h3>I'd love to get your opinion!</h3>
+                <p> * Required Fields</p>
                 <form action="/submit-form-data" method="POST">
                     <fieldset>
                         <legend>Let's get to know you first!</legend>
                         <!------------------------------------------->
-                        <label for="firstlast">First and Last Name</label>
+                        <p class="contact-p">First and Last Name *</p>
+                        <label for="firstlast">
                             <input 
                               type="text" 
                               name="firstlast" 
                               class="required"
                               id="firstlast" 
-                              size="30" 
+                              size="50" 
                               maxlength="100" 
                               required 
                               placeholder="First and last name" 
                               autofocus />
+                        </label>
                         <!------------------------------------------->
-                        <label for="email">Email</label>
+                        <p class="contact-p">Email Address *</p>
+                        <label for="email">
                             <input 
                                 type="email" 
                                 name="eAddress" 
                                 class="required"
                                 id="email" 
-                                size="30" 
+                                size="50" 
                                 maxlength="100" 
                                 required 
                                 pattern="[^ @]+@[^ @]+.[a-z]+"
                                 placeholder="name@host.com" />
+                        </label>
                         <!------------------------------------------->
-                        <label for="number">Phone Number</label>
+                        <p class="contact-p">Phone Number *</p>
+                        <label for="number">
                             <input
                                 name="number"
                                 id="phone-number"
-                                size="30" 
+                                size="50" 
                                 maxlength="12" 
                                 required 
                                 pattern="\(\d{3}\)\d{3}-\d{4}"
                                 placeholder="(123)456-7890" >
-                            </input>       
+                            </input>   
+                        </label>    
                         <!------------------------------------------->
-                        <label for="gender">Gender</label>
+                        <p class="contact-p">Gender</p>
+                        <label for="gender">
                             <select name="referrer" id="gender">
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
@@ -79,21 +86,21 @@
                                 <option value="other">Other</option>
                                 <option value="rather-not" selected>Rather not say</option>
                             </select>
+                        </label>
                         <!------------------------------------------->
-                        <p>18 or older?</p>
+                        <p class="contact-p">18 or older?</p>
                         <label for="yes">
-                            <input type="radio" name="age" id="yes" value="Yes">
+                            <input type="radio" name="age" id="yes" value="Yes" checked>
                             Yes</label>
                         <label for="no">
-                            <input type="radio" name="age" id="no" value="No" selected>
+                            <input type="radio" name="age" id="no" value="No">
                             No</label>
                         <!------------------------------------------->
                     </fieldset>
                     <fieldset>
                         <!------------------------------------------->
                         <legend>Ok, opinion time!</legend>
-                        <p>Suggestions of improvements?</p>
-                        <p>(Choose all that apply.)</p>
+                        <p class="contact-p">Suggestions for improvement? (Choose all that apply.)</p>
                         <label for="layout">
                             <input 
                             type="checkbox" 
@@ -123,7 +130,7 @@
                             value="Functionality"
                             checked />Functionality</label>
                         <!------------------------------------------->
-                        <p>What was your favorite page?</p>
+                        <p class="contact-p">What was your favorite page?</p>
                         <label for="index">
                             <input type="radio" name="favorite" id="index" value="Index">
                             Index</label>
@@ -134,18 +141,21 @@
                             <input type="radio" name="favorite" id="gallery" value="Gallery">
                             Gallery</label>
                          <label for="none">
-                            <input type="radio" name="favorite" id="none" value="None" selected>
+                            <input type="radio" name="favorite" id="none" value="None" checked>
                             None</label>
                         <!------------------------------------------->
-                        <label for="thoughts">Any final thoughts?</label>
+                        <p class="contact-p">Any final thoughts?</p>
+                        <label for="thoughts">
                             <textarea 
                             name="thoughts" 
                             id="thoughts" 
-                            size="100"
+                            size=500px;
                             minlenth="3" 
                             maxlenth="250" 
-                            required placeholder="Write 250 characters or less." >
-                        </textarea>   
+                            required 
+                            placeholder="Write 250 characters or less." >
+                            </textarea> 
+                        </label>  
                         <!------------------------------------------->                 
                         <button type="submit">Submit</button>
                         <!------------------------------------------->

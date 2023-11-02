@@ -267,34 +267,49 @@ input,
 button,
 textarea,
 select {
-  font-size: 110%;
+  font-weight: bold;
+  font-size: 95%;
+  color: var(--dark_green);
   padding: 1%;
   font-family: inherit;
 }
 
 fieldset {
-  border: 2px solid var(--brass);
-  margin-top: 5px;
-  padding: 2px;
+  border: 2px solid var(--grey);
+  margin-top: 8px;
+  padding: 5px;
 }
 
-legend {
-  color: var(--dark_green) ;
-  font-size: 150%;
-  border: 2px solid var(--brass);
+legend, option{
+  background-color: var(--light_green);
+  padding: 10px;
+  color: var(--grey);
+  font-size: 110%;
+  border: 2px solid var(--grey);
+  border-radius: 10px;
 }
 
 label {
+
   display: block;
-  margin-top: 2%;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.contact-p {
+  size: 80%;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 button {
+  margin-left: 475px;
+  margin-bottom: 10px;
   background-color: var(--brass);
-  border-radius: 10px 0 10px 0;
+  border-radius: 20px 0 15px 0;
   border: 2px solid var(--dark_green);
   font-weight: bold;
-  padding: 10px 5px 10px 5px;
+  padding: 15px 10px 15px 10px;
 }
 
 input {
@@ -302,37 +317,36 @@ input {
   font-size: 110%;
 }
 
-:focus {
-  background-color: yellow;
+textarea {
+  padding: 0;
+  width: 92%;
+  height: 250px;
 }
 
+:focus {
+  border-radius: 10px 0 10px 0;
+
+}
+
+*::placeholder{
+  color: var(--baby_blue);
+  font-size: 70%;
+}
 *:required {
   border: 2px solid green;
 }
 
 label.required:after {
   content: " *";
-  color: red;
+  color: rgb(186, 0, 0);
 }
 
 input:invalid {
-  border: 3px solid red;
+  border: 3px solid rgb(186, 0, 0);
 }
 
 input:valid {
-  border: 2px solid green;
-}
-
-input::placeholder {
-  color: darkgray;
-}
-
-input:disabled {
-  background: repeating-linear-gradient(142deg, #CCCCCC, #CCCCCC 4px, #999999 22px);
-}
-
-input:enabled {
-  background: white;
+  border: 2px solid var(--forest_green);
 }
 
 /* ----- Media ----- */
