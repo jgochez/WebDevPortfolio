@@ -265,7 +265,6 @@ h6 {
 form,
 input,
 button,
-textarea,
 select {
   font-weight: bold;
   font-size: 95%;
@@ -318,9 +317,12 @@ input {
 }
 
 textarea {
+  font: inherit;
+  font-size: 75%;
   padding: 2px;
   width: 92%;
   height: 250px;
+  color: var(--dark_green);
 }
 
 :focus {
