@@ -36,48 +36,51 @@
                     <fieldset>
                         <legend>Let's get to know you first!</legend>
                         <!------------------------------------------->
-                        <p class="contact-p">First and Last Name *</p>
+                        <p class="contact-p">First and Last Name *
                         <label for="firstlast">
                             <input 
                               type="text" 
                               name="firstlast" 
                               class="required"
                               id="firstlast" 
-                              size="50" 
+                              max-size="75" 
                               maxlength="100" 
                               required 
                               placeholder="First and last name" 
                               autofocus />
                         </label>
+                        </p>
                         <!------------------------------------------->
-                        <p class="contact-p">Email Address *</p>
+                        <p class="contact-p">Email Address *
                         <label for="email">
                             <input 
                                 type="email" 
                                 name="eAddress" 
                                 class="required"
                                 id="email" 
-                                size="50" 
+                                max-size="75" 
                                 maxlength="100" 
                                 required 
                                 pattern="[^ @]+@[^ @]+.[a-z]+"
                                 placeholder="name@host.com" />
                         </label>
+                        </p>
                         <!------------------------------------------->
-                        <p class="contact-p">Phone Number *</p>
+                        <p class="contact-p">Phone Number *
                         <label for="number">
                             <input
                                 name="number"
                                 id="phone-number"
-                                size="50" 
+                                max-size="75" 
                                 maxlength="12" 
                                 required 
                                 pattern="\(\d{3}\)\d{3}-\d{4}"
                                 placeholder="(123)456-7890" >
                             </input>   
-                        </label>    
+                        </label>  
+                        </p>  
                         <!------------------------------------------->
-                        <p class="contact-p">Gender</p>
+                        <p class="contact-p">Gender
                         <label for="gender">
                             <select name="referrer" id="gender">
                                 <option value="male">Male</option>
@@ -87,20 +90,22 @@
                                 <option value="rather-not" selected>Rather not say</option>
                             </select>
                         </label>
+                        </p>
                         <!------------------------------------------->
-                        <p class="contact-p">18 or older?</p>
+                        <p class="contact-p">18 or older?
                         <label for="yes">
                             <input type="radio" name="age" id="yes" value="Yes" checked>
                             Yes</label>
                         <label for="no">
                             <input type="radio" name="age" id="no" value="No">
                             No</label>
+                        </p>
                         <!------------------------------------------->
                     </fieldset>
                     <fieldset>
                         <!------------------------------------------->
                         <legend>Ok, opinion time!</legend>
-                        <p class="contact-p">Suggestions for improvement? (Choose all that apply.)</p>
+                        <p class="contact-p">Suggestions for improvement? (Choose all that apply.)
                         <label for="layout">
                             <input 
                             type="checkbox" 
@@ -129,8 +134,9 @@
                             id="functionality" 
                             value="Functionality"
                             checked />Functionality</label>
+                        </p>
                         <!------------------------------------------->
-                        <p class="contact-p">What was your favorite page?</p>
+                        <p class="contact-p">What was your favorite page?
                         <label for="index">
                             <input type="radio" name="favorite" id="index" value="Index">
                             Index</label>
@@ -143,11 +149,13 @@
                          <label for="none">
                             <input type="radio" name="favorite" id="none" value="None" checked>
                             None</label>
+                        </p>
                         <!------------------------------------------->
-                        <p class="contact-p">Overall assessment?</p>
+                        <p class="contact-p">Overall assessment?
                         <label for="thoughts">
                             <textarea name="thoughts"  id="thoughts" minlenth="3" maxlenth="250" required placeholder="Write 250 characters or less." ></textarea> 
                         </label> 
+                        </p>
                         <!------------------------------------------->                 
                         <button type="submit">Submit</button>
                         <!------------------------------------------->

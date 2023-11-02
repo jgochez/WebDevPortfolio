@@ -275,12 +275,14 @@ select {
 }
 
 fieldset {
+
   border: 2px solid var(--grey);
   margin-top: 8px;
   padding: 5px;
 }
 
-legend, option{
+legend,
+option {
   background-color: var(--light_green);
   padding: 10px;
   color: var(--grey);
@@ -290,7 +292,6 @@ legend, option{
 }
 
 label {
-
   display: block;
   margin-bottom: 10px;
   margin-left: 20px;
@@ -318,7 +319,6 @@ input {
 }
 
 textarea {
-  margin-left: 7px;
   font-size: 75%;
   padding: 2px;
   width: 92%;
@@ -330,7 +330,7 @@ textarea {
   border-radius: 10px 0 10px 0;
 }
 
-input::placeholder{
+input::placeholder {
   color: var(--baby_blue);
   font-size: 70%;
 }
@@ -338,6 +338,7 @@ input::placeholder{
 *:required {
   border: 2px solid rgb(148, 5, 5);
 }
+
 
 /* ----- Media ----- */
 /*
@@ -382,11 +383,26 @@ input::placeholder{
 @keyframes App-logo {}
 
 /*   ===== TABLET  media query overrides mobile styles ===== */
-@media all and (max-width: 600px) {
+@media all and (max-width: 800px) {
   .gallery {
     flex-direction: column;
     display: flex;
     justify-content: center;
+  }
+
+  button,
+  form,
+  fieldset, 
+  input,
+  .contact-p {
+    margin: 2px auto;
+    padding: 5px;
+  }
+
+  label {
+    margin: 1%;
+    padding: 1px;
+    margin-left: 10px;
   }
 
   .gallery figure,
