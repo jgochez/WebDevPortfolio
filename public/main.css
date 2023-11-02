@@ -383,6 +383,7 @@ input::placeholder {
 @keyframes App-logo {}
 
 /*   ===== TABLET  media query overrides mobile styles ===== */
+
 @media all and (max-width: 800px) {
   .gallery {
     flex-direction: column;

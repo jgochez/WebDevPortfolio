@@ -35,8 +35,8 @@
                 <form action="/submit-form-data" method="POST">
                     <fieldset>
                         <legend>Let's get to know you first!</legend>
-                        <!------------------------------------------->
-                        <p class="contact-p">First and Last Name *
+                        <!--------------- Name Input: Text ------------------->
+                        <p class="contact-p">First and Last Name *</p>
                         <label for="firstlast">
                             <input 
                               type="text" 
@@ -49,9 +49,8 @@
                               placeholder="First and last name" 
                               autofocus />
                         </label>
-                        </p>
-                        <!------------------------------------------->
-                        <p class="contact-p">Email Address *
+                        <!------------------- Email Input: Number/ Text ---------------------->
+                        <p class="contact-p">Email Address *</p>
                         <label for="email">
                             <input 
                                 type="email" 
@@ -64,9 +63,8 @@
                                 pattern="[^ @]+@[^ @]+.[a-z]+"
                                 placeholder="name@host.com" />
                         </label>
-                        </p>
-                        <!------------------------------------------->
-                        <p class="contact-p">Phone Number *
+                        <!-----------------Number Input: Number ----------------------->
+                        <p class="contact-p">Phone Number *</p>
                         <label for="number">
                             <input
                                 name="number"
@@ -78,9 +76,8 @@
                                 placeholder="(123)456-7890" >
                             </input>   
                         </label>  
-                        </p>  
-                        <!------------------------------------------->
-                        <p class="contact-p">Gender
+                        <!--------------- Gender Select: Option ---------------------->
+                        <p class="contact-p">Gender</p>
                         <label for="gender">
                             <select name="referrer" id="gender">
                                 <option value="male">Male</option>
@@ -90,73 +87,69 @@
                                 <option value="rather-not" selected>Rather not say</option>
                             </select>
                         </label>
-                        </p>
-                        <!------------------------------------------->
-                        <p class="contact-p">18 or older?
+                        <!----------------- Age Input: Radio ----------------------->
+                        <p class="contact-p">18 or older?</p>
                         <label for="yes">
                             <input type="radio" name="age" id="yes" value="Yes" checked>
                             Yes</label>
                         <label for="no">
                             <input type="radio" name="age" id="no" value="No">
                             No</label>
-                        </p>
-                        <!------------------------------------------->
+                       
                     </fieldset>
                     <fieldset>
-                        <!------------------------------------------->
                         <legend>Ok, opinion time!</legend>
-                        <p class="contact-p">Suggestions for improvement? (Choose all that apply.)
+                        <!------------------ Suggestions Input: Checkbox --------------------->
+                        <p class="contact-p">Suggestions for improvement? (Choose all that apply.)</p>
                         <label for="layout">
                             <input 
                             type="checkbox" 
                             name="suggestions" 
                             id="layout"
                             value="Layout"
-                            checked />Layout</label>
+                            checked /> Layout</label>
                         <label for="color-scheme">
                             <input 
                             type="checkbox" 
                             name="suggestions" 
                             id="color-scheme" 
                             value="Color-Scheme"
-                            checked />Color-Scheme</label>
+                            checked /> Color-Scheme</label>
                         <label for="legibility">
                             <input 
                             type="checkbox" 
                             name="suggestions" 
                             id="legibility" 
                             value="Legibility"
-                            checked />Legibility</label>
+                            checked /> Legibility</label>
                         <label for="functionality">
                             <input 
                             type="checkbox" 
                             name="suggestions" 
                             id="functionality" 
                             value="Functionality"
-                            checked />Functionality</label>
-                        </p>
-                        <!------------------------------------------->
-                        <p class="contact-p">What was your favorite page?
+                            checked /> Functionality</label>
+                        <!--------------------Favorite Input: Radio ---------------------->
+                        <p class="contact-p">What was your favorite page?</p>
                         <label for="index">
                             <input type="radio" name="favorite" id="index" value="Index">
-                            Index</label>
+                             Index</label>
                         <label for="contact">
                             <input type="radio" name="favorite" id="contact" value="Contact" >
-                            Contact</label>
+                             Contact</label>
                         <label for="gallery">
                             <input type="radio" name="favorite" id="gallery" value="Gallery">
-                            Gallery</label>
+                             Gallery</label>
                          <label for="none">
                             <input type="radio" name="favorite" id="none" value="None" checked>
-                            None</label>
-                        </p>
-                        <!------------------------------------------->
-                        <p class="contact-p">Overall assessment?
+                             None</label>
+                        
+                        <!------------------ Assessment TextArea ------------------------>
+                        <p class="contact-p">Overall assessment?</p>
                         <label for="thoughts">
                             <textarea name="thoughts"  id="thoughts" minlenth="3" maxlenth="250" required placeholder="Write 250 characters or less." ></textarea> 
                         </label> 
-                        </p>
-                        <!------------------------------------------->                 
+                        <!------------------- Submit Button ----------------------->                 
                         <button type="submit">Submit</button>
                         <!------------------------------------------->
                     </fieldset>
