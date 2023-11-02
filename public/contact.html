@@ -29,11 +29,127 @@
     <main>
         <section>   
             <h2>Contact</h2>
+            <p> * Required Fields</p>
             <article>
-
+                <h3>I'd love to get your opinion!</h3>
+                <form action="/submit-form-data" method="POST">
+                    <fieldset>
+                        <legend>Let's get to know you first!</legend>
+                        <!------------------------------------------->
+                        <label for="firstlast">First and Last Name</label>
+                            <input 
+                              type="text" 
+                              name="firstlast" 
+                              id="firstlast" 
+                              size="30" 
+                              maxlength="100" 
+                              required 
+                              placeholder="First and last name" 
+                              autofocus />
+                        <!------------------------------------------->
+                        <label for="email">Email</label>
+                            <input 
+                                type="email" 
+                                name="eAddress" 
+                                id="email" 
+                                size="30" 
+                                maxlength="100" 
+                                required 
+                                pattern="[^ @]+@[^ @]+.[a-z]+"
+                                placeholder="name@host.com" />
+                        <!------------------------------------------->
+                        <label for="number">Phone Number</label>
+                            <input
+                                name="number"
+                                id="phone-number"
+                                size="30" 
+                                maxlength="12" 
+                                required 
+                                pattern="\(\d{3}\)\d{3}-\d{4}"
+                                placeholder="(123)456-7890" >
+                            </input>       
+                        <!------------------------------------------->
+                        <label for="gender">Gender</label>
+                            <select name="referrer" id="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="non-binary">None-binary</option>
+                                <option value="other">Other</option>
+                                <option value="rather-not" selected>Rather not say</option>
+                            </select>
+                        <!------------------------------------------->
+                        <p>18 or older?</p>
+                        <label for="yes">
+                            <input type="radio" name="age" id="yes" value="Yes" selected>
+                            Yes</label>
+                        <label for="no">
+                            <input type="radio" name="age" id="no" value="No" >
+                            No</label>
+                        <!------------------------------------------->
+                    </fieldset>
+                    <fieldset>
+                        <!------------------------------------------->
+                        <legend>Ok, opinion time!</legend>
+                        <p>Suggestions of improvements?</p>
+                        <p>(Choose all that apply.)</p>
+                        <label for="layout">
+                            <input 
+                            type="checkbox" 
+                            name="suggestions" 
+                            id="layout"
+                            value="Layout"
+                            checked /></label>
+                        <label for="color-scheme">
+                            <input 
+                            type="checkbox" 
+                            name="suggestions" 
+                            id="color-scheme" 
+                            value="Color-Scheme"
+                            checked /></label>
+                        <label for="legibility">
+                            <input 
+                            type="checkbox" 
+                            name="suggestions" 
+                            id="legibility" 
+                            value="Legibility"
+                            checked /></label>
+                        <label for="functionality">
+                            <input 
+                            type="checkbox" 
+                            name="suggestions" 
+                            id="functionality" 
+                            value="Functionality"
+                            checked /></label>
+                        <!------------------------------------------->
+                        <p>What was your favorite page?</p>
+                        <label for="index">
+                            <input type="radio" name="favorite" id="index" value="Index">
+                            Index</label>
+                        <label for="contact">
+                            <input type="radio" name="favorite" id="contact" value="Contact" >
+                            Contact</label>
+                        <label for="gallery">
+                            <input type="radio" name="favorite" id="gallery" value="Gallery">
+                            Gallery</label>
+                         <label for="none">
+                            <input type="radio" name="favorite" id="none" value="None" selected>
+                            None</label>
+                        <!------------------------------------------->
+                        <label for="thoughts">Any final thoughts?</label>
+                            <textarea 
+                            name="thoughts" 
+                            id="thoughts" 
+                            minlenth="3" 
+                            maxlenth="250" 
+                            required placeholder="Write 250 characters or less." >
+                        </textarea>   
+                        <!------------------------------------------->                 
+                        <button type="submit">Submit</button>
+                        <!------------------------------------------->
+                    </fieldset>
+                </form>
             </article>
         </section>
-
     </main>
     <footer>
         <p>
