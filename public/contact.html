@@ -40,6 +40,7 @@
                             <input 
                               type="text" 
                               name="firstlast" 
+                              class="required"
                               id="firstlast" 
                               size="30" 
                               maxlength="100" 
@@ -51,6 +52,7 @@
                             <input 
                                 type="email" 
                                 name="eAddress" 
+                                class="required"
                                 id="email" 
                                 size="30" 
                                 maxlength="100" 
@@ -80,10 +82,10 @@
                         <!------------------------------------------->
                         <p>18 or older?</p>
                         <label for="yes">
-                            <input type="radio" name="age" id="yes" value="Yes" selected>
+                            <input type="radio" name="age" id="yes" value="Yes">
                             Yes</label>
                         <label for="no">
-                            <input type="radio" name="age" id="no" value="No" >
+                            <input type="radio" name="age" id="no" value="No" selected>
                             No</label>
                         <!------------------------------------------->
                     </fieldset>
@@ -98,28 +100,28 @@
                             name="suggestions" 
                             id="layout"
                             value="Layout"
-                            checked /></label>
+                            checked />Layout</label>
                         <label for="color-scheme">
                             <input 
                             type="checkbox" 
                             name="suggestions" 
                             id="color-scheme" 
                             value="Color-Scheme"
-                            checked /></label>
+                            checked />Color-Scheme</label>
                         <label for="legibility">
                             <input 
                             type="checkbox" 
                             name="suggestions" 
                             id="legibility" 
                             value="Legibility"
-                            checked /></label>
+                            checked />Legibility</label>
                         <label for="functionality">
                             <input 
                             type="checkbox" 
                             name="suggestions" 
                             id="functionality" 
                             value="Functionality"
-                            checked /></label>
+                            checked />Functionality</label>
                         <!------------------------------------------->
                         <p>What was your favorite page?</p>
                         <label for="index">
@@ -139,6 +141,7 @@
                             <textarea 
                             name="thoughts" 
                             id="thoughts" 
+                            size="100"
                             minlenth="3" 
                             maxlenth="250" 
                             required placeholder="Write 250 characters or less." >

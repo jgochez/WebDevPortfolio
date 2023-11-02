@@ -1,46 +1,36 @@
-/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
-/*  ===== See tablet, desktop, and print @media queries at the bottom. */
-
-
-/*   ----- Imports  -----  */
-/* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */
-/* @import "component1.css";   Component-specific stylesheets, if any.   */
-/* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Ubuntu:wght@300&display=swap');
 
 /*   ----- Variables  -----  */
 :root {
-    --brass: #88833D;
-    /* accent */
-    --grey: #5A5D66;
-    --light_grey: #D1D8ED;
-    --light_grey_transp: rgba(209, 216, 237, .85);
-    --teal: #427175;
-    --baby_blue: #B6D4D9;
-    --baby_blue_transp: rgba(182, 212, 217, .70);
-    --forest_green: #41633C;
-    --light_green: #9DC696;
-    --light_green_transp: rgba(146, 230, 133, .60);
-    --dark_green: #344F30;
-    --teal_transp: rgba(66, 113, 117, .70);
+  --brass: #88833D;
+  /* accent */
+  --grey: #5A5D66;
+  --light_grey: #D1D8ED;
+  --light_grey_transp: rgba(209, 216, 237, .85);
+  --teal: #427175;
+  --baby_blue: #B6D4D9;
+  --baby_blue_transp: rgba(182, 212, 217, .70);
+  --forest_green: #41633C;
+  --light_green: #9DC696;
+  --light_green_transp: rgba(146, 230, 133, .60);
+  --dark_green: #344F30;
+  --teal_transp: rgba(66, 113, 117, .70);
 }
 
-/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+/*  ----- Viewport ----- */
 body {
-    /* Can alternatively define in html {}. */
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-image: url(images/trail_hike_woods.jpeg);
-    color: var(--forest_green);
-    font-family: 'Ubuntu', sans-serif;
-    /* Define with at least one font name and its related generic family name.*/
-    font-size: 1em;
-    line-height: 1;
-    margin: 0 auto;
-    padding: 2%;
-    max-width: 850px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-image: url(images/trail_hike_woods.jpeg);
+  color: var(--forest_green);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  line-height: 1;
+  margin: 0 auto;
+  padding: 2%;
+  max-width: 850px;
 }
 
 /*  ----- Page layout blocks -----  */
@@ -50,118 +40,118 @@ main,
 section,
 article,
 footer {
-    background-color: var(--light_grey_transp);
-    color: var(--forest_green);
-    border-radius: 10px;
-    margin: 1% auto;
-    padding: 2%;
+  background-color: var(--light_grey_transp);
+  color: var(--forest_green);
+  border-radius: 10px;
+  margin: 1% auto;
+  padding: 2%;
 }
 
 main {
-    border: 2px solid var(--brass);
+  border: 2px solid var(--brass);
 }
 
 header,
 footer {
-    background-color: var(--baby_blue_transp);
-    border-style: solid;
-    border-width: 3px;
-    border-color: var(--brass);
+  background-color: var(--baby_blue_transp);
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--brass);
 }
 
 footer p {
 
-    background-color: var(--light_grey_transp);
-    border-radius: 10px 0 10px 0;
-    border: 2px solid var(--brass);
-    font-weight: bold;
-    padding: 10px 5px 10px 5px;
+  background-color: var(--light_grey_transp);
+  border-radius: 10px 0 10px 0;
+  border: 2px solid var(--brass);
+  font-weight: bold;
+  padding: 10px 5px 10px 5px;
 }
 
 footer {
-    clear: both;
+  clear: both;
 }
 
 section {
-    border-style: solid;
-    border-width: 3px;
-    border-color: var(--brass);
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--brass);
 }
 
 article {
-    margin: 0, auto;
-    margin-left: 8%;
-    padding: 20px;
-    max-width: 650px;
-    box-sizing: border-box;
-    border: 3px solid var(--brass);
+  margin: 0, auto;
+  margin-left: 8%;
+  padding: 20px;
+  max-width: 650px;
+  box-sizing: border-box;
+  border: 3px solid var(--brass);
 }
 
 article li,
 p {
-    white-space: normal;
-    word-wrap: break-word;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 h1,
 footer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 h2 {
-    margin-left: 2%;
+  margin-left: 2%;
 }
 
 #hero-image {
-    margin-left: 45%;
-    height: 64px;
-    width: 64px;
+  margin-left: 45%;
+  height: 64px;
+  width: 64px;
 }
 
-/***************************************/
+/*  ----- Navigations -----  */
 nav {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .local-nav {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .local-nav a {
-    background-color: var(--baby_blue_transp);
-    text-align: left;
-    border-radius: 5px;
-    border: 2px solid var(--teal);
-    font-size: 1em;
-    padding: 3px 15px;
-    margin: 1%;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
+  background-color: var(--baby_blue_transp);
+  text-align: left;
+  border-radius: 5px;
+  border: 2px solid var(--teal);
+  font-size: 1em;
+  padding: 3px 15px;
+  margin: 1%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 
 .local-nav li {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 nav a {
-    background-color: var(--light_green_transp);
-    border: 2px solid var(--brass);
-    border-radius: 10px;
-    color: var(--forest_green);
-    font-size: 1.3em;
-    font-weight: bold;
-    margin-right: 3px;
-    padding: 5px 20px;
-    text-decoration: none;
+  background-color: var(--light_green_transp);
+  border: 2px solid var(--brass);
+  border-radius: 10px;
+  color: var(--forest_green);
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-right: 3px;
+  padding: 5px 20px;
+  text-decoration: none;
 }
 
 nav a:hover {
-    background-color: var(--light_grey);
-    color: var(--dark_green);
+  background-color: var(--light_grey);
+  color: var(--dark_green);
 }
 
 h1,
@@ -170,38 +160,38 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Exo 2', sans-serif;
+  font-family: 'Exo 2', sans-serif;
 }
 
-/***************************************/
+/*  ----- Gallery -----  */
 .gallery {
-    margin-left: 22%;
-    display: flex;
-    flex-flow: row wrap;
-    border-style: none;
-    padding: 2%;
-    color: var(--forest_green);
-    overflow: hidden;
+  margin-left: 22%;
+  display: flex;
+  flex-flow: row wrap;
+  border-style: none;
+  padding: 2%;
+  color: var(--forest_green);
+  overflow: hidden;
 
 }
 
 .gallery figure {
-    max-width: 30%;
-    border: 1px solid var(--brass);
-    margin: 10px 50px 10px 0;
+  max-width: 30%;
+  border: 1px solid var(--brass);
+  margin: 10px 50px 10px 0;
 }
 
 .gallery img {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .gallery figcaption {
-    padding: 3px;
+  padding: 3px;
 }
 
-/* ----- Anchors ----- Text links */
+/*  ----- Anchors -----  */
 /*
   a {}
   a:link {}
@@ -209,7 +199,6 @@ h6 {
   a:active {}
   a:visited {}
   */
-/*  ----- Navigation ----- Override text links for navigation only.  */
 
 /*  -----  Typography  ----- */
 /*
@@ -272,21 +261,79 @@ h6 {
   */
 
 /*  ----- Form ----- */
-/*
-  form {}
-  fieldset {}
-    legend {}
-  label {}
-  button {}
-  input {}
-  select {}
-    optgroup {}
-    option {}
-  textarea {}
-  output {}
-  meter {}
-  progress {}
-  */
+
+form,
+input,
+button,
+textarea,
+select {
+  font-size: 110%;
+  padding: 1%;
+  font-family: inherit;
+}
+
+fieldset {
+  border: 2px solid var(--brass);
+  margin-top: 5px;
+  padding: 2px;
+}
+
+legend {
+  color: var(--dark_green) ;
+  font-size: 150%;
+  border: 2px solid var(--brass);
+}
+
+label {
+  display: block;
+  margin-top: 2%;
+}
+
+button {
+  background-color: var(--brass);
+  border-radius: 10px 0 10px 0;
+  border: 2px solid var(--dark_green);
+  font-weight: bold;
+  padding: 10px 5px 10px 5px;
+}
+
+input {
+  padding: 2px;
+  font-size: 110%;
+}
+
+:focus {
+  background-color: yellow;
+}
+
+*:required {
+  border: 2px solid green;
+}
+
+label.required:after {
+  content: " *";
+  color: red;
+}
+
+input:invalid {
+  border: 3px solid red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+
+input::placeholder {
+  color: darkgray;
+}
+
+input:disabled {
+  background: repeating-linear-gradient(142deg, #CCCCCC, #CCCCCC 4px, #999999 22px);
+}
+
+input:enabled {
+  background: white;
+}
 
 /* ----- Media ----- */
 /*
@@ -332,17 +379,17 @@ h6 {
 
 /*   ===== TABLET  media query overrides mobile styles ===== */
 @media all and (max-width: 600px) {
-    .gallery {
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-    }
+  .gallery {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
 
-    .gallery figure,
-    img {
-        max-width: 250px;
-        font-weight: 1em;
-    }
+  .gallery figure,
+  img {
+    max-width: 250px;
+    font-weight: 1em;
+  }
 }
 
 /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
