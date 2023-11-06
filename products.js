@@ -50,46 +50,35 @@ let htmlBottom= `
 </body>
 </html>
 `;
-app.post("/submit-form-data", (req, res) => {
-    const person = req.body.firstlast;
-    const address = req.body.eAddress;
-    const favorite = req.body.favorite;
-    const number = req.body.number;
-    const suggestions = req.body.suggestions;
-    const thoughts = req.body.thoughts;
 
+
+// Define a JavaScript object with arrays of products, their company names, and prices: 
+const products = [
+    { company: 'AGYM', product: 'Spinning Cat Scratcher Ball', price: 52.99 },
+    { company: 'Jasonwell', product: 'Foldable Dog Pool', price: 27.25 },
+    { company: 'Expawlorer', product: 'Dog Fence Window', price: 30.50 },
+    { company: 'Lollimeow', product: 'Capsule Pet Travel Backpack', price: 59.00 },
+    { company: 'Drool\'d', product: 'Cat Hamster Wheel', price: 349.75 }
+];
+
+// Allow exporting of the object to other functions:
+module.exports.products = products;
+
+
+// Display the object in a table in the terminal console to confirm it works:
+// https://developer.mozilla.org/en-US/docs/Web/API/Console/table
+console.table(products); 
+
+app.post("/submit-form-data", (req, res) => {
+    
 res.send(`
     ${htmlTop}
     <section>
         <h2>Response</h2>
         <article>
-            <h3> ${person}, thank you so much for your input!</h3>
-
-            <p>We are responding to your feedback! You told us that your favorite page
-            was <strong>${favorite}</strong> and left this message: <p>
-
-            <p><strong><em>${thoughts}</em></strong></p>
-
-            <p>You also said that we could work on our <strong> ${suggestions}!</strong></p>
-            <p> Thank you for all the helpful feedback! We will be sending you a surprise giftcard
-            to In-n-Out to the following email: <p>
-           
-            <p><strong>${address}</strong></p>
-
-            <p>Please enjoy a Double-Double on us! 
-            Taking suggestions seriously, we will be continually modifying our application,
-            and continually requesting users to give us their input. When the next surveys
-            open we will be messaging you at this phone number:</p>
-
-            <p><strong>${number}</strong><p>
-
-            <p>Feel free to leave your thoughts any time. Any and all suggestions are welcomed so that
-            we may perfect our website!</p>
-            
-            <p> <strong>Thank you, and take care!</strong></p>
+            <p>Currently under production!</p>
         </article>
     </section>
     ${htmlBottom}`)});
-
+ 
 app.listen(PORT, () => { console.log(`Server listening on port ${PORT}...`); });
-
