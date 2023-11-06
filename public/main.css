@@ -63,7 +63,6 @@ footer p {
   background-color: var(--light_grey_transp);
   border-radius: 10px 0 10px 0;
   border: 2px solid var(--brass);
-  /* font-weight: bold; */
   padding: 10px 5px 10px 5px;
 }
 
@@ -92,9 +91,11 @@ p {
   word-wrap: break-word;
 }
 
-article dd, li {
+article dd,
+li {
   padding: 5px;
 }
+
 strong {
   font-family: 'Exo 2', sans-serif;
   font-weight: bold;
@@ -150,7 +151,6 @@ nav a {
   border-radius: 10px;
   color: var(--forest_green);
   font-size: 1.3em;
-  /* font-weight: bold; */
   margin-right: 3px;
   padding: 5px 20px;
   text-decoration: none;
@@ -251,21 +251,53 @@ h6 {
   ins {}
   */
 /*  ----- Table ----- */
-/*
-  table {}
-  caption {}
-  thead {}
-  tbody {}
-  tfoot {}
-  tr {}
-    tr:nth-child(even) {}
-  th {}
-  td {}
-    td:nth-child(1) {}
-  colgroup {}
-  data {}
-  datalist {}
-  */
+
+table {
+  border-collapse: collapse;
+  height: 250px;
+  width: 500px;
+  margin: 1% auto;
+}
+
+caption {
+  background-color: rgba(148, 5, 5, 0.5);
+  border: 1px solid var(--grey);
+  font-weight: bold;
+  font-family: 'Exo 2', sans-serif;
+  padding: 1%;
+}
+
+thead {border-bottom: 1px solid var(--brass);}
+
+tr td {
+  border-bottom: 1px solid var(--brass);
+  padding: 1%;
+  text-align: left;
+  color: var(--forest_green);
+}
+
+tr th {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: bold;
+  padding: 1%;
+  text-align: left;
+  color: var(--forest_green);
+}
+
+/* tbody {}
+
+tfoot {}
+
+tr:nth-child(even) {}
+
+td:nth-child(1) {}
+
+colgroup {}
+
+data {}
+
+datalist {} */
+
 
 /*  ----- Form ----- */
 
@@ -302,6 +334,7 @@ label {
   display: block;
   margin-bottom: 10px;
   margin-left: 20px;
+  margin-top: 10px;
 }
 
 .contact-p {
@@ -312,7 +345,7 @@ label {
 
 button {
   margin-left: 475px;
-  margin-bottom: 10px;
+  margin-bottom: 10px 0 10px 0;
   background-color: var(--brass);
   border-radius: 20px 0 15px 0;
   border: 2px solid var(--dark_green);
@@ -320,9 +353,13 @@ button {
   padding: 15px 10px 15px 10px;
 }
 
+select {
+  margin-left: 15p
+}
 input {
   padding: 2px;
   font-size: 110%;
+  margin-left: 15px;
 }
 
 textarea {
@@ -331,6 +368,7 @@ textarea {
   width: 92%;
   height: 250px;
   color: var(--dark_green);
+  margin-left: 15px;
 }
 
 :focus {
@@ -400,7 +438,7 @@ input::placeholder {
 
   button,
   form,
-  fieldset, 
+  fieldset,
   input,
   .contact-p {
     margin: 2px auto;
@@ -417,6 +455,11 @@ input::placeholder {
   img {
     max-width: 250px;
     font-weight: 1em;
+  }
+  
+  table {
+  height: 100px;
+  width: 300px;
   }
 }
 
