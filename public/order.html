@@ -33,7 +33,7 @@
                 <p>May I take your order please?</p>
                 <form action="/submit-order-data" method="POST">
                     <fieldset>
-                        <legend>Lets get to know you first!</legend>
+                        <legend>Delivery Information</legend>
                         <!--------------- Name Input: Text ------------------->
                         <p class="contact-p">First and Last Name *</p>
                         <label for="firstlast">
@@ -80,7 +80,56 @@
                             </select>
                         <label for="additional">Additional Address Information (optional):</label>
                             <textarea id="additional" name="additional" minlenth="3" maxlenth="250" required placeholder="Write 250 characters or less."></textarea>
+                        <!----------------- Instructions: Textarea  ----------------------->
+                        <label for="instructions">Delivery Instructions:</label>
+                            <textarea id="instructions" name="instructions" placeholder="Enter delivery instructions"></textarea>
                     </fieldset>
+                    <fieldset>
+                        <!----------------- Products: Table ----------------------->
+                        <legend>Product Selection</legend>
+                        <table>
+                          <caption>Products</caption>
+                          <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Product</th>
+                                <th>Price</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <td><label for="product1"><input type="radio" id="product1" name="product" value="Product 1">AGYM</label></td>
+                                <td>Spinning Cat Scratcher Ball</td>
+                                <td>52.99</td>
+                            </tr>
+                            <tr>
+                                <td><label for="product2"><input type="radio" id="product2" name="product" value="Product 2">Jasonwell</label></td>
+                                <td>Foldable Dog Pool</td>
+                                <td>27.25</td>
+                            </tr>
+                            <tr>
+                                <td><label for="product2"><input type="radio" id="product2" name="product" value="Product 2">Expawlorer</label></td>
+                                <td>Dog Fence Window</td>
+                                <td>30.50</td>
+                            </tr>
+                            <tr>
+                                <td><label for="product2"><input type="radio" id="product2" name="product" value="Product 2">Lollimeow</label></td>
+                                <td>Capsule Pet Travel Backpack</td>
+                                <td>59.00</td>
+                            </tr>
+                            <tr>
+                                <td><label for="product2"><input type="radio" id="product2" name="product" value="Product 2">Drool'd</label></td>
+                                <td>Cat Hamster Wheel</td>
+                                <td>price: 349.75</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!----------------- Quantity Input: Number ----------------------->     
+                        <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" autofocus>
+                    </fieldset>
+                    <!----------------- Submit: Button ----------------------->
+                    <button type="submit">Submit</button>
                 </form>
             </article>
         </section>
