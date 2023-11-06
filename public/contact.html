@@ -79,7 +79,7 @@
                         <!--------------- Gender Select: Option ---------------------->
                         <p class="contact-p">Gender</p>
                         <label for="gender">
-                            <select name="referrer" id="gender">
+                            <select name="gender" id="gender">
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
                                 <option value="non-binary">None-binary</option>
@@ -100,7 +100,7 @@
                     <fieldset>
                         <legend>Ok, opinion time!</legend>
                         <!------------------ Suggestions Input: Checkbox --------------------->
-                        <p class="contact-p">Suggestions for improvement? (Choose all that apply.)</p>
+                        <p class="contact-p">Suggestions for improvement? * (Choose all that apply.)</p>
                         <label for="layout">
                             <input 
                             type="checkbox" 
@@ -128,11 +128,12 @@
                             name="suggestions" 
                             id="functionality" 
                             value="Functionality"
+                            required
                             checked /> Functionality</label>
                         <!--------------------Favorite Input: Radio ---------------------->
-                        <p class="contact-p">What was your favorite page?</p>
+                        <p class="contact-p">What was your favorite page? *</p>
                         <label for="index">
-                            <input type="radio" name="favorite" id="index" value="Index">
+                            <input type="radio" name="favorite" id="index" value="Index" required>
                              Index</label>
                         <label for="contact">
                             <input type="radio" name="favorite" id="contact" value="Contact" >
@@ -145,7 +146,7 @@
                              None</label>
                         
                         <!------------------ Assessment TextArea ------------------------>
-                        <p class="contact-p">Overall assessment?</p>
+                        <p class="contact-p">Overall assessment? *</p>
                         <label for="thoughts">
                             <textarea name="thoughts"  id="thoughts" minlenth="3" maxlenth="250" required placeholder="Write 250 characters or less." ></textarea> 
                         </label> 
