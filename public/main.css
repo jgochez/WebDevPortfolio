@@ -344,8 +344,9 @@ label {
 }
 
 button {
-  margin-left: 475px;
-  margin-bottom: 10px 0 10px 0;
+  margin-left: 480px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   background-color: var(--brass);
   border-radius: 20px 0 15px 0;
   border: 2px solid var(--dark_green);
