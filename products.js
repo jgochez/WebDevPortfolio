@@ -63,14 +63,14 @@ let htmlBottom= `
 
 // listens for client POST request and provide response
 app.post("/submit-order-data", (req, res) => { 
-    const varName = req.body.name;
+    const person = req.body.firstlast;
     
 res.send(` 
     ${htmlTop}
     <section>
         <h2>Response</h2>
         <article>
-            <p>Currently under repair :)</p>
+            <p>Hi ${person}, we are currently under repair :)</p>
         </article>
     </section>
     ${htmlBottom}`)}); 
