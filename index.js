@@ -74,7 +74,7 @@ res.send(`
             <p><strong><em>${thoughts}</em></strong></p>
 
             <p>You also said that we could work on our <strong> ${suggestions}!</strong></p>
-            <p> Thank you for all the helpful feedback! We will be sending you a surprise giftcard
+            <p> Thank you for all the helpful feedback! We will be sending you a surprise gift card
             to In-n-Out to the following email: <p>
            
             <p><strong>${address}</strong></p>
@@ -119,19 +119,20 @@ res.send(`
         <section>
             <h2>Response</h2>
             <article>
-                <p>Hi <strong>${person}</strong>,</p>
+                <p>Hi <strong>${person}</strong>, ⁣</p>
                 
                 <p><strong>${company}</strong> really appreciates you buying their
                 <strong>${product}</strong> product.</p>
-                <p>You order quantity was: <strong>${quantity}</strong></p>
+                <p>Your order quantity was: <strong>${quantity}</strong></p>
                 <p>Your final balance is: <strong>$${price * quantity}</strong></p>
                 
-                <p>We will be shipping your order to the following address: <strong>${homeAddress}</strong></p>
+                <p>We will be shipping your order to the following address:</p>
+                <p><strong>${homeAddress}</strong></p>
 
                 <p>As you requested, we will execute the following delivery instructions:</p>
                 <p><strong>${instructions}</strong></p>
                 
-                <p>As a final thank you, we will sending you some coupons
+                <p>As a final thank you, we will be sending you some coupons
                 at the following email: <strong>${email}</strong></p>
 
                 <p>Thank you and take care!</p>
