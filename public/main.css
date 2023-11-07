@@ -284,10 +284,7 @@ tr th {
   color: var(--forest_green);
 }
 
-/* tbody {}
-
-tfoot {}
-
+/*
 tr:nth-child(even) {}
 
 td:nth-child(1) {}
@@ -355,7 +352,7 @@ button {
 }
 
 select {
-  margin-left: 15p
+  margin-left: 10px;
 }
 input {
   padding: 2px;
