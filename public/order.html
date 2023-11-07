@@ -61,16 +61,18 @@
                                 placeholder="name@host.com" />
                         <!----------------- Address Input: Number/ Text ----------------------->
                         <label for="street">Street Address * :</label>
-                            <input type="text" id="street" name="street" max-size="75" maxlength="100" required placeholder="123 Fake st.">
-                        <label for="city">City * :</label>
-                            <input type="text" id="city" name="city" max-size="75" maxlength="100" required placeholder="Gotham City">
-                        <label for="state">State * :</label>
-                            <input type="text" id="state" name="state" max-size="75" maxlength="100" required placeholder="New Jersey">
-                        <label for="zip">ZIP * :</label>
-                            <input type="text" id="zip" name="zip" max-size="75" maxlength="100" required placeholder="01234">
+                            <input 
+                                type="text" 
+                                name="sAddress" 
+                                class="required"
+                                id="street" 
+                                max-size="75" 
+                                maxlength="100" 
+                                required 
+                                placeholder="123 Fake st. Gotham City, NJ 01234">
                         <!----------------- Instructions: Textarea  ----------------------->
-                        <label for="additional">Delivery Instructions:</label>
-                            <textarea id="additional" name="additional" minlenth="3" maxlenth="250" required placeholder="Write 250 characters or less."></textarea>
+                        <label for="instructions">Delivery Instructions:</label>
+                            <textarea id="Instructions" name="instructions" minlenth="3" maxlenth="250" required placeholder="Write 250 characters or less."></textarea>
                     </fieldset>
                     <fieldset>
                         <!----------------- Products: Table ----------------------->
@@ -86,27 +88,27 @@
                           </thead>
                           <tbody>
                             <tr>
-                                <td><label for="product1"><input type="radio" id="product1" name="product" value="Product 1"> AGYM</label></td>
+                                <td><label for="AGYM"><input type="radio" id="AGYM" name="company" value="AGYM"> AGYM</label></td>
                                 <td>Spinning Cat Scratcher Ball</td>
                                 <td>52.99</td>
                             </tr>
                             <tr>
-                                <td><label for="product2"><input type="radio" id="product2" name="product" value="Product 2"> Jasonwell</label></td>
+                                <td><label for="Jasonwell"><input type="radio" id="Jasonwell" name="company" value="Jasonwell"> Jasonwell</label></td>
                                 <td>Foldable Dog Pool</td>
                                 <td>27.25</td>
                             </tr>
                             <tr>
-                                <td><label for="product2"><input type="radio" id="product2" name="product" value="Product 2"> Expawlorer</label></td>
+                                <td><label for="Expawlorer"><input type="radio" id="Expawlorer" name="company" value="Expawlorer"> Expawlorer</label></td>
                                 <td>Dog Fence Window</td>
                                 <td>30.50</td>
                             </tr>
                             <tr>
-                                <td><label for="product2"><input type="radio" id="product2" name="product" value="Product 2"> Lollimeow</label></td>
+                                <td><label for="Lollimeow"><input type="radio" id="Lollimeow" name="company" value="Lollimeow"> Lollimeow</label></td>
                                 <td>Capsule Pet Travel Backpack</td>
                                 <td>59.00</td>
                             </tr>
                             <tr>
-                                <td><label for="product2"><input type="radio" id="product2" name="product" value="Product 2"> Drool'd</label></td>
+                                <td><label for="Drool'd"><input type="radio" id="Drool'd" name="company" value="Drool'd"> Drool'd</label></td>
                                 <td>Cat Hamster Wheel</td>
                                 <td>349.75</td>
                             </tr>

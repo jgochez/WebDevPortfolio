@@ -100,13 +100,41 @@ res.send(`
     app.post("/submit-order-data", (req, res) => { 
         const productsObj = require('./products.js').products;
         const person = req.body.firstlast;
-        
+        const email = req.body.eAddress;
+        const homeAddress = req.body.sAddress;
+        const company = req.body.company;
+        const instructions = req.body.instructions;
+        const quantity = req.body.quantity;
+
+    function compareCompanies(myCompany) {
+        for(const companyData of productsObj){
+            if (companyData.company === myCompany) {
+                return [companyData.product, companyData.price]
+            }}}
+
+    const [product, price] = compareCompanies(company)
+
     res.send(` 
         ${htmlTop}
         <section>
             <h2>Response</h2>
             <article>
-                <p>Hi ${person}, we are currently under repair :)</p>
+                <p>Hi <strong>${person}</strong>,</p>
+                
+                <p><strong>${company}</strong> really appreciates you buying their
+                <strong>${product}</strong> product.</p>
+                <p>You order quantity was: <strong>${quantity}</strong></p>
+                <p>Your final balance is: <strong>$${price * quantity}</strong></p>
+                
+                <p>We will be shipping your order to the following address: <strong>${homeAddress}</strong></p>
+
+                <p>As you requested, we will execute the following delivery instructions:</p>
+                <p><strong>${instructions}</strong></p>
+                
+                <p>As a final thank you, we will sending you some coupons
+                at the following email: <strong>${email}</strong></p>
+
+                <p>Thank you and take care!</p>
             </article>
         </section>
         ${htmlBottom}`)}); 
