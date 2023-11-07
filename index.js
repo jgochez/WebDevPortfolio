@@ -113,9 +113,9 @@ res.send(`
             }}}
 
     const [product, price] = compareCompanies(company)
-    const nominalPrice = price * quantity;
-    const adjustedPrice = nominalPrice.toFixed(2);
-    
+    const unadustedPrice = price * quantity;
+    const adjustedPrice = unadustedPrice.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+
     res.send(` 
         ${htmlTop}
         <section>
