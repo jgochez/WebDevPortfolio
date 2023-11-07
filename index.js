@@ -4,8 +4,8 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true })); // set up middleware
+app.use(express.static('public')); // set up serving static files through middleware
 
 let htmlTop = `
 <!DOCTYPE html>
@@ -50,6 +50,9 @@ let htmlBottom= `
 </body>
 </html>
 `;
+
+// -----------------------Contact Page ---------------------------
+// listens for client POST request and provide response
 app.post("/submit-form-data", (req, res) => {
     const person = req.body.firstlast;
     const address = req.body.eAddress;
@@ -91,5 +94,23 @@ res.send(`
     </section>
     ${htmlBottom}`)});
 
+
+    // -----------------------Order Page ---------------------------
+    // listens for client POST request and provide response
+    app.post("/submit-order-data", (req, res) => { 
+        const productsObj = require('./products.js').products;
+        const person = req.body.firstlast;
+        
+    res.send(` 
+        ${htmlTop}
+        <section>
+            <h2>Response</h2>
+            <article>
+                <p>Hi ${person}, we are currently under repair :)</p>
+            </article>
+        </section>
+        ${htmlBottom}`)}); 
+
+// create server to listen for HTTP requests
 app.listen(PORT, () => { console.log(`Server listening on port ${PORT}...`); });
 
