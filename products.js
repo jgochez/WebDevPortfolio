@@ -62,7 +62,7 @@ let htmlBottom= `
 `;
 
 // listens for client POST request and provide response
-app.post("/submit-form-data", (req, res) => { 
+app.post("/submit-order-data", (req, res) => { 
     const varName = req.body.name;
     
 res.send(` 
