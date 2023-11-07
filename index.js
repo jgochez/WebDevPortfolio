@@ -126,7 +126,7 @@ res.send(`
                 <p><strong>${company}</strong> really appreciates you buying their
                 <strong>${product}</strong> product!</p>
                 <p>Your order quantity was: <strong>${quantity}</strong></p>
-                <p>Your final balance is: <strong>$${adjustedPrice}</strong></p>
+                <p>Your final balance is: <strong>${adjustedPrice}</strong></p>
                 
                 <p>We will be shipping your order to the following address:</p>
                 <p><strong>${homeAddress}</strong></p>
