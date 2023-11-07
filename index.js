@@ -113,18 +113,20 @@ res.send(`
             }}}
 
     const [product, price] = compareCompanies(company)
-
+    const nominalPrice = price * quantity;
+    const adjustedPrice = nominalPrice.toFixed(2);
+    
     res.send(` 
         ${htmlTop}
         <section>
-            <h2>Response</h2>
+            <h2>Order Confirmation</h2>
             <article>
                 <p>Hi <strong>${person}</strong>, ⁣</p>
                 
                 <p><strong>${company}</strong> really appreciates you buying their
-                <strong>${product}</strong> product.</p>
+                <strong>${product}</strong> product!</p>
                 <p>Your order quantity was: <strong>${quantity}</strong></p>
-                <p>Your final balance is: <strong>$${price * quantity}</strong></p>
+                <p>Your final balance is: <strong>$${adjustedPrice}</strong></p>
                 
                 <p>We will be shipping your order to the following address:</p>
                 <p><strong>${homeAddress}</strong></p>
