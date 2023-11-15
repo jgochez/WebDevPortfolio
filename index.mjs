@@ -3,7 +3,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
-// import asyncHandler from './asyncHandler.mjs';
+import { products as productsObj } from './products.js';
+import asyncHandler from './asyncHandler.mjs';
 
 
 dotenv.config();
@@ -133,9 +134,7 @@ res.send(`
 
     // -----------------------Order Page ---------------------------
     // listens for client POST request and provide response
-    import { products as productsObj } from './products.js';
     app.post("/submit-order-data", (req, res) => { 
-        // const productsObj = require('./products.js').products;
         const person = req.body.firstlast;
         const email = req.body.eAddress;
         const homeAddress = req.body.sAddress;

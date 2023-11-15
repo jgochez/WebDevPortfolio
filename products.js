@@ -8,5 +8,5 @@ const products = [
     { company: 'Drool\'d', product: 'Cat Hamster Wheel', price: 349.75 }
 ];
 
-module.exports.products = products; // import data
+export { products }; // export data
 console.table(products); // display table in console

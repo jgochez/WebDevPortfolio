@@ -20,27 +20,28 @@ function createRowFromAPI(result) {
 // fetch data from API
 async function fetchData(event) {
     event.preventDefault();
-    const tbodyId = document.getElementById('userData').getAttribute('id');// event.target => button
-    const url = tbodyId === 'userData' ? "https://randomuser.me/api/" : "/submit-fetch-data"; 
+    // create variable representing <tBody> for conditional statement
+    const tBodyId = document.getElementById('userData').getAttribute('id');
+    const conditionalURL = tBodyId === 'userData' ? "https://randomuser.me/api/" : "/submit-fetch-data"; 
 
     try {
-        const response = await fetch(url);
-        const data = await response.json();
+        const promisedResponse = await fetch(conditionalURL);
+        const promisedData = await promisedResponse.json();
 
         if (response.ok) {
-            // Call function to render rows 
-            document.getElementById('userData').innerHTML += createRowFromAPI(data.results[0]);
-            // Success message
+            // Call function to render rows into <tBody>
+            document.getElementById('userData').innerHTML += createRowFromAPI(promisedData.results[0]);
+            // Success message to corresponding <p>
             document.getElementById('successMessage').innerHTML = 'Data fetched successfully!';
         } else {
             throw new Error(`API responded with status: ${response.status}`);
         }
     } catch (error) {
-        // Error handling
+        // Failure message to corresponding <p>
         document.getElementById('failureMessage').innerHTML = `Error: ${error.message}`;
     }
 }
 
-// Event Listener
+// Event Listener from <button>
 const fetchDataButton = document.getElementById('fetchDataButton');
-fetchDataButton.addEventListener('click', fetchData); // Call the async function
+fetchDataButton.addEventListener('click', fetchData); 
