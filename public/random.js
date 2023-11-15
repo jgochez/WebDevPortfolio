@@ -2,10 +2,15 @@
 
 // create row in our table tag
 function createRowFromAPI(result) {
-    return `
+    userData.innerHTML += `
         <tr>
             <td><img src="${result.picture.thumbnail}" alt="Thumbnail"></td>
-            <td><a href="mailto:${result.email}">${result.name.first} ${result.name.last}</a></td>
+            <td>
+                <a href="mailto:${result.email}">
+                ${result.name.first} 
+                ${result.name.last}
+                </a>
+            </td>
             <td>${result.phone}</td>
             <td>${result.location.city}</td>
         </tr>

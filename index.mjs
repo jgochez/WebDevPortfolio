@@ -41,6 +41,7 @@ let htmlTop = `
         <a href="contact.html">Contact</a>
         <a href="gallery.html">Gallery</a>
         <a href="order.html">Order</a>
+        <a href="staff.html">Staff</a>
     </nav>
     <main>
 `;
@@ -55,7 +56,7 @@ let htmlBottom= `
 </body>
 </html>
 `;
-//----------------- Middleware -------------------
+//----------------- Middleware Statistic -------------------
 const clickInterval = 10;
 let clickCount = 0; 
 
@@ -71,26 +72,19 @@ app.use((req, res, next) => {
 //----------------- Error (500) Handling -------------------
 app.use((err, req, res, next) => {
     // check status code for error
-    if (res.statusCode === 500) {
-        console.error('Server error: ', err);
-    }
-    next(err);
+    console.error('Server error: ', err);
+    res.status(500).send("Sorry! We ran into an error!")
 });
 
 //----------------- Staff Page -------------------
 // Route to fetch data using POST method
-app.post('/fetch-data', async (req, res) => {
-    try {
+app.get(async (req, res) => {
+    
         const response = await fetch('https://randomuser.me/api/');
         const data = await response.json();
         res.send(data);
-    } catch (error) {
-        console.error('You ran into an error fetching data: ', error);
-        // set status code if error
-        res.status(500).send('Error fetching data from the API');
-        next(error);
-    }
-});
+    } 
+);
 
 
 // -----------------------Contact Page ---------------------------
