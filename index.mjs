@@ -61,7 +61,7 @@ const clickInterval = 10;
 let clickCount = 0; 
 
 // Middleware function that increments click count and checks for every 10 clicks
-app.use((req, res, next) => {
+app.use('submit-fetch-data', (req, res, next) => {
     clickCount++;
     if (clickCount % clickInterval === 0) {
         console.log(`Number of times button was clicked: ${clickCount}`);
@@ -78,7 +78,7 @@ app.use((err, req, res, next) => {
 
 //----------------- Staff Page -------------------
 // Route to fetch data using POST method
-app.get(async (req, res) => {
+app.get('submit-fetch-data', async (req, res) => {
     
         const response = await fetch('https://randomuser.me/api/');
         const data = await response.json();

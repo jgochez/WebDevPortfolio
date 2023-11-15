@@ -23,7 +23,7 @@ async function fetchData(event) {
     const tbodyId = event.target.getAttribute('id'); // event.target => button
     // if {tbodyId === 'userData'} => url = "https://randomuser.me/api/" 
     //elif {tbodyId !== 'userData'} => url = "/endpoint"
-    const url = tbodyId === 'userData' ? "https://randomuser.me/api/" : "/endpoint"; 
+    const url = tbodyId === 'userData' ? "https://randomuser.me/api/" : "/submit-fetch-data"; 
 
     try {
         const response = await fetch(url);
