@@ -20,10 +20,8 @@ function createRowFromAPI(result) {
 // fetch data from API
 async function fetchData(event) {
     event.preventDefault();
-    const tbodyId = event.target.getAttribute('id'); // event.target => button
-    // if {tbodyId === 'userData'} => url = "https://randomuser.me/api/" 
-    //elif {tbodyId !== 'userData'} => url = "/submit-fetch-data"
-    const url = tbodyId === 'fetchDataButton' ? "https://randomuser.me/api/" : "/submit-fetch-data"; 
+    const tbodyId = document.getElementById('userData').getAttribute('id');// event.target => button
+    const url = tbodyId === 'userData' ? "https://randomuser.me/api/" : "/submit-fetch-data"; 
 
     try {
         const response = await fetch(url);
@@ -32,7 +30,6 @@ async function fetchData(event) {
         if (response.ok) {
             // Call function to render rows 
             document.getElementById('userData').innerHTML += createRowFromAPI(data.results[0]);
-
             // Success message
             document.getElementById('successMessage').innerHTML = 'Data fetched successfully!';
         } else {

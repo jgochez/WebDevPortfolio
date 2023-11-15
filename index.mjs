@@ -3,7 +3,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
-import asyncHandler from './asyncHandler.mjs';
+// import asyncHandler from './asyncHandler.mjs';
 
 
 dotenv.config();
@@ -62,7 +62,7 @@ const clickInterval = 10;
 let clickCount = 0; 
 
 // Middleware function that increments click count and checks for every 10 clicks
-app.use('submit-fetch-data', (req, res, next) => {
+app.use('/submit-fetch-data', (req, res, next) => {
     clickCount++;
     if (clickCount % clickInterval === 0) {
         console.log(`Number of times button was clicked: ${clickCount}`);
