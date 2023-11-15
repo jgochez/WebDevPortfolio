@@ -2,7 +2,7 @@
 
 // create row in our table tag
 function createRowFromAPI(result) {
-    userData.innerHTML += `
+    return`
         <tr>
             <td><img src="${result.picture.thumbnail}" alt="Thumbnail"></td>
             <td>
