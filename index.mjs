@@ -4,6 +4,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 
+
 dotenv.config();
 const PORT = process.env.PORT
 const app = express();
@@ -87,6 +88,7 @@ app.post('/fetch-data', async (req, res) => {
         console.error('You ran into an error fetching data: ', error);
         // set status code if error
         res.status(500).send('Error fetching data from the API');
+        next(error);
     }
 });
 
@@ -137,8 +139,9 @@ res.send(`
 
     // -----------------------Order Page ---------------------------
     // listens for client POST request and provide response
+    import { products as productsObj } from './products.js';
     app.post("/submit-order-data", (req, res) => { 
-        const productsObj = require('./products.js').products;
+        // const productsObj = require('./products.js').products;
         const person = req.body.firstlast;
         const email = req.body.eAddress;
         const homeAddress = req.body.sAddress;

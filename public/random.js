@@ -26,7 +26,7 @@ async function fetchData(event) {
 
         if (response.ok) {
             // Call function to render rows 
-            document.getElementById(tbodyId).innerHTML = createRowFromAPI(data.results[0]);
+            document.getElementById('userData').innerHTML = createRowFromAPI(data.results[0]);
 
             // Success message
             document.getElementById('successMessage').innerHTML = 'Data fetched successfully!';
@@ -40,7 +40,4 @@ async function fetchData(event) {
 }
 
 // Event Listener
-document.getElementById('fetchDataButton').addEventListener('click', function(event) {
-    event.preventDefault(); 
-    fetchData(); // Call the async function
-});
+document.getElementById('fetchDataButton').addEventListener('click', fetchData); // Call the async function
