@@ -1,5 +1,6 @@
 'use strict'
 
+// create row in our table tag
 function createRowFromAPI(result) {
     return `
         <tr>
@@ -11,6 +12,7 @@ function createRowFromAPI(result) {
     `;
 }
 
+// fetch data from API
 async function fetchData(event) {
     event.preventDefault();
     const tbodyId = event.target.getAttribute('id'); // event.target => button

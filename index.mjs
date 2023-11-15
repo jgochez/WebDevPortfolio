@@ -3,8 +3,10 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
+
+dotenv.config();
+const PORT = process.env.PORT
 const app = express();
-const PORT = 3000;
 
 app.use(express.urlencoded({ extended: true })); // set up middleware
 app.use(express.static('public')); // set up serving static files through middleware
@@ -52,7 +54,7 @@ let htmlBottom= `
 </body>
 </html>
 `;
-//----------------- Middleware and Route Handling -------------------
+//----------------- Middleware -------------------
 const clickInterval = 10;
 let clickCount = 0; 
 
@@ -60,11 +62,21 @@ let clickCount = 0;
 app.use((req, res, next) => {
     clickCount++;
     if (clickCount % clickInterval === 0) {
-        console.log(`The button has been clicked ${clickCount} times.`);
+        console.log(`Number of times button was clicked: ${clickCount}`);
     }
     next();
 });
 
+//----------------- Error (500) Handling -------------------
+app.use((err, req, res, next) => {
+    // check status code for error
+    if (res.statusCode === 500) {
+        console.error('Server error: ', err);
+    }
+    next(err);
+});
+
+//----------------- Staff Page -------------------
 // Route to fetch data using POST method
 app.post('/fetch-data', async (req, res) => {
     try {
@@ -72,18 +84,12 @@ app.post('/fetch-data', async (req, res) => {
         const data = await response.json();
         res.send(data);
     } catch (error) {
-        console.error('Error fetching data: ', error);
+        console.error('You ran into an error fetching data: ', error);
+        // set status code if error
         res.status(500).send('Error fetching data from the API');
     }
 });
 
-// Error message route for server status 500
-app.use((err, req, res, next) => {
-    if (res.statusCode === 500) {
-        console.error('Server error: ', err);
-    }
-    next(err);
-});
 
 // -----------------------Contact Page ---------------------------
 // listens for client POST request and provide response
