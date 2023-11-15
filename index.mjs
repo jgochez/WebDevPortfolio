@@ -62,7 +62,7 @@ const clickInterval = 10;
 let clickCount = 0; 
 
 // Middleware function that increments click count and checks for every 10 clicks
-app.use('https://randomuser.me/api/', (req, res, next) => {
+app.use('submit-fetch-data', (req, res, next) => {
     clickCount++;
     if (clickCount % clickInterval === 0) {
         console.log(`Number of times button was clicked: ${clickCount}`);
@@ -79,7 +79,7 @@ app.use((err, req, res, next) => {
 
 //----------------- Staff Page -------------------
 // Route to fetch data using POST method
-app.post('https://randomuser.me/api/',asyncHandler(async (req, res) => {
+app.post('/submit-fetch-data',asyncHandler(async (req, res) => {
     
         const response = await fetch('https://randomuser.me/api/');
         const data = await response.json();
