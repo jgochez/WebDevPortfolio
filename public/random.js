@@ -28,13 +28,13 @@ async function fetchData(event) {
         const promisedResponse = await fetch(conditionalURL);
         const promisedData = await promisedResponse.json();
 
-        if (response.ok) {
+        if (promisedResponse.ok) {
             // Call function to render rows into <tBody>
             document.getElementById('userData').innerHTML += createRowFromAPI(promisedData.results[0]);
             // Success message to corresponding <p>
             document.getElementById('successMessage').innerHTML = 'Data fetched successfully!';
         } else {
-            throw new Error(`API responded with status: ${response.status}`);
+            throw new Error(`API responded with status: ${promisedResponse.status}`);
         }
     } catch (error) {
         // Failure message to corresponding <p>

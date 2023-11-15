@@ -8,7 +8,7 @@ import asyncHandler from './asyncHandler.mjs';
 
 
 dotenv.config();
-const PORT = process.env.PORT
+const PORT = process.env.PORT;
 const app = express();
 
 app.use(express.urlencoded({ extended: true })); // set up middleware
@@ -71,22 +71,22 @@ app.use('/submit-fetch-data', (req, res, next) => {
     next();
 });
 
+//----------------- Staff Page -------------------
+// Route to post data that was fetched using POST method
+app.post('/submit-fetch-data',asyncHandler(async (req, res) => {
+    
+        const promisedResponse = await fetch('https://randomuser.me/api/');
+        const promisedData = await promisedResponse.json();
+        res.send(promisedData);
+    } 
+));
+
 //----------------- Error (500) Handling -------------------
 app.use((err, req, res, next) => {
     // check status code for error
     console.error('Server error: ', err);
     res.status(500).send("Sorry! We ran into an error!")
 });
-
-//----------------- Staff Page -------------------
-// Route to post data that was fetched, using POST method
-app.post('/submit-fetch-data',asyncHandler(async (req, res) => {
-    
-        const response = await fetch('https://randomuser.me/api/');
-        const data = await response.json();
-        res.send(data);
-    } 
-));
 
 // -----------------------Contact Page ---------------------------
 // listens for client POST request and provide response
