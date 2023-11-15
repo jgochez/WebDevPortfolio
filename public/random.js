@@ -22,8 +22,8 @@ async function fetchData(event) {
     event.preventDefault();
     const tbodyId = event.target.getAttribute('id'); // event.target => button
     // if {tbodyId === 'userData'} => url = "https://randomuser.me/api/" 
-    //elif {tbodyId !== 'userData'} => url = "/endpoint"
-    const url = tbodyId === 'fetchDataButton' ? "https://randomuser.me/api/" : "/submit-fetch-data"; 
+    //elif {tbodyId !== 'userData'} => url = "/submit-fetch-data"
+    const url = tbodyId === 'userData' ? "https://randomuser.me/api/" : "/submit-fetch-data"; 
 
     try {
         const response = await fetch(url);
@@ -45,4 +45,4 @@ async function fetchData(event) {
 }
 
 // Event Listener
-document.getElementById('fetchDataButton').addEventListener('click', fetchData); // Call the async function
+document.getElementById('userData').addEventListener('click', fetchData); // Call the async function
