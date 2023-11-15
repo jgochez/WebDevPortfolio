@@ -87,7 +87,6 @@ app.post('/submit-fetch-data',asyncHandler(async (req, res) => {
     } 
 ));
 
-
 // -----------------------Contact Page ---------------------------
 // listens for client POST request and provide response
 app.post("/submit-form-data", (req, res) => {
