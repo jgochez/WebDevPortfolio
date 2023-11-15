@@ -199,13 +199,15 @@ h6 {
 }
 
 /*  ----- Anchors -----  */
-/*
-  a {}
-  a:link {}
-  a:hover {}
-  a:active {}
-  a:visited {}
-  */
+a:link {
+  color: var(--light_green); 
+  text-decoration: none; 
+}
+
+a:hover {
+  color: var(--light_grey); 
+  text-decoration: underline; 
+}
 
 /*  -----  Typography  ----- */
 /*
@@ -284,16 +286,11 @@ tr th {
   color: var(--forest_green);
 }
 
-/*
-tr:nth-child(even) {}
+table img {
+  width: 50px; 
+  border: 2px solid var(--border-color);
+}
 
-td:nth-child(1) {}
-
-colgroup {}
-
-data {}
-
-datalist {} */
 
 
 /*  ----- Form ----- */
