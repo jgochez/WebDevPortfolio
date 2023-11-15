@@ -205,7 +205,7 @@ a:link {
 }
 
 a:hover {
-  color: var(--light_grey); 
+  color: var(--brass); 
   text-decoration: underline; 
 }
 
