@@ -1,6 +1,8 @@
 'use strict';
 
-const express = require('express');
+import express from 'express';
+import dotenv from 'dotenv';
+import fetch from 'node-fetch';
 const app = express();
 const PORT = 3000;
 
@@ -50,6 +52,38 @@ let htmlBottom= `
 </body>
 </html>
 `;
+//----------------- Middleware and Route Handling -------------------
+const clickInterval = 10;
+let clickCount = 0; 
+
+// Middleware function that increments click count and checks for every 10 clicks
+app.use((req, res, next) => {
+    clickCount++;
+    if (clickCount % clickInterval === 0) {
+        console.log(`The button has been clicked ${clickCount} times.`);
+    }
+    next();
+});
+
+// Route to fetch data using POST method
+app.post('/fetch-data', async (req, res) => {
+    try {
+        const response = await fetch('https://randomuser.me/api/');
+        const data = await response.json();
+        res.send(data);
+    } catch (error) {
+        console.error('Error fetching data: ', error);
+        res.status(500).send('Error fetching data from the API');
+    }
+});
+
+// Error message route for server status 500
+app.use((err, req, res, next) => {
+    if (res.statusCode === 500) {
+        console.error('Server error: ', err);
+    }
+    next(err);
+});
 
 // -----------------------Contact Page ---------------------------
 // listens for client POST request and provide response
