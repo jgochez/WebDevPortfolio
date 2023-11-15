@@ -21,20 +21,20 @@ function createRowFromAPI(result) {
 async function fetchData(event) {
     event.preventDefault();
     // create variable representing <tBody> for conditional statement
-    const tbodyId = document.getElementById('userData').getAttribute('id');
-    const url = tbodyId === 'userData' ? "https://randomuser.me/api/" : "/submit-fetch-data"; 
+    const tBodyId = document.getElementById('userData').getAttribute('id');
+    const url = tBodyId === 'userData' ? "https://randomuser.me/api/" : "/submit-fetch-data"; 
 
     try {
-        const response = await fetch(url);
-        const data = await response.json();
+        const promisedResponse = await fetch(url);
+        const promisedData = await promisedResponse.json();
 
-        if (response.ok) {
+        if (promisedResponse.ok) {
             // Call function to render rows into <tBody>
-            document.getElementById('userData').innerHTML += createRowFromAPI(data.results[0]);
+            document.getElementById('userData').innerHTML += createRowFromAPI(promisedData.results[0]);
             // Success message to corresponding <p>
             document.getElementById('successMessage').innerHTML = 'Data fetched successfully!';
         } else {
-            throw new Error(`API responded with status: ${response.status}`);
+            throw new Error(`API responded with status: ${promisedResponse.status}`);
         }
     } catch (error) {
         // Failure message to corresponding <p>
