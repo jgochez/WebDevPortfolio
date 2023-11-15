@@ -79,7 +79,7 @@ app.use((err, req, res, next) => {
 });
 
 //----------------- Staff Page -------------------
-// Route to fetch data using POST method
+// Route to post data that was fetched, using POST method
 app.post('/submit-fetch-data',asyncHandler(async (req, res) => {
     
         const response = await fetch('https://randomuser.me/api/');
