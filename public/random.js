@@ -21,9 +21,9 @@ function createRowFromAPI(result) {
 async function fetchData(event) {
     event.preventDefault();
     const tbodyId = event.target.getAttribute('id'); // event.target => button
-    // if {tbodyId === 'respondData'} => url = "https://randomuser.me/api/" 
-    //elif {tbodyId !== 'respondData'} => url = "/endpoint"
-    const url = tbodyId === 'respondData' ? "https://randomuser.me/api/" : "/endpoint"; 
+    // if {tbodyId === 'userData'} => url = "https://randomuser.me/api/" 
+    //elif {tbodyId !== 'userData'} => url = "/endpoint"
+    const url = tbodyId === 'userData' ? "https://randomuser.me/api/" : "/endpoint"; 
 
     try {
         const response = await fetch(url);
