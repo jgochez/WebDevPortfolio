@@ -1,4 +1,10 @@
 'use strict'
+/*
+This file will register an event from a button tag through a click which will
+be requesting data from an API. The event will call a function which both 
+fetches data from an API using promises and if server connection is a success
+will call another function to render the data into our DOM.
+*/
 
 // create row in our table tag
 function createRowFromAPI(result) {
@@ -17,7 +23,7 @@ function createRowFromAPI(result) {
     `;
 }
 
-// fetch data from API
+// fetch data from API and Render data to DOM
 async function fetchData(event) {
     event.preventDefault();
     // create variable representing <tBody> for conditional statement
