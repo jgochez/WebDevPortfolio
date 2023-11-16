@@ -68,7 +68,7 @@ app.use('/submit-fetch-data', (req, res, next) => {
     if (clickCount % clickInterval === 0) {
         console.log(`Number of times button was clicked: ${clickCount}`);
     }
-    next();
+    next(); // go to staff page route handler
 });
 
 //----------------- Error (500) Handling -------------------
@@ -79,7 +79,7 @@ app.use((err, req, res, next) => {
 });
 
 //----------------- Staff Page -------------------
-// Route to post data that was fetched using POST method
+// Route to listen for call to post data 
 app.post('/submit-fetch-data',asyncHandler(async (req, res) => {
     const promisedResponse = await fetch('https://randomuser.me/api/');
     const promisedData = await promisedResponse.json();
