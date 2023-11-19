@@ -1,19 +1,34 @@
 'use strict';
 
+//--------- Imports -----------//
+import mongoose from 'mongoose';
 import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 import { products as productsObj } from './products.js';
 import asyncHandler from './asyncHandler.mjs';
-
-
 dotenv.config();
+
+//--------- Constants -------------//
 const PORT = process.env.PORT
 const app = express();
+const db = mongoose.connection;
 
-app.use(express.urlencoded({ extended: true })); // set up middleware
-app.use(express.static('public')); // set up serving static files through middleware
+//--------- Mongoose Setup -------------//
+mongoose.connect(
+    process.env.MONGODB_CONNECT_STRING,
+    { useNewUrlParser: true }
+);
 
+db.once("open", () => {
+    console.log("Successfully connected to MongoDB using Mongoose!");
+});
+
+//---------- Middleware Setup -------------//
+app.use(express.urlencoded({ extended: true })); 
+app.use(express.static('public')); 
+
+//----------- Variables --------------//
 let htmlTop = `
 <!DOCTYPE html>
 <html lang="en">
@@ -58,6 +73,7 @@ let htmlBottom= `
 </body>
 </html>
 `;
+
 //----------------- Middleware Statistic -------------------
 const clickInterval = 10;
 let clickCount = 0; 
