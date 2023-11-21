@@ -1,7 +1,7 @@
 'use strict';
 
 //--------- Imports -----------//
-import mongoose from 'mongoose';
+// import mongoose from 'mongoose';
 import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
@@ -12,17 +12,17 @@ dotenv.config();
 //--------- Constants -------------//
 const PORT = process.env.PORT
 const app = express();
-const db = mongoose.connection;
+// const db = mongoose.connection;
 
 //--------- Mongoose Setup -------------//
-mongoose.connect(
-    process.env.MONGODB_CONNECT_STRING,
-    { useNewUrlParser: true }
-);
+// mongoose.connect(
+//     process.env.MONGODB_CONNECT_STRING,
+//     { useNewUrlParser: true }
+// );
 
-db.once("open", () => {
-    console.log("Successfully connected to MongoDB using Mongoose!");
-});
+// db.once("open", () => {
+//     console.log("Successfully connected to MongoDB using Mongoose!");
+// });
 
 //---------- Middleware Setup -------------//
 app.use(express.urlencoded({ extended: true })); 

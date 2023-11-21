@@ -2,7 +2,7 @@
 
 import 'dotenv/config';
 import express from 'express';
-import * as movies from './movies-model.mjs';
+import * as movies from './games-model.mjs';
 
 const PORT = process.env.PORT;
 const app = express();

@@ -1,11 +1,11 @@
 {
-  "name": "movies-starter-backend",
+  "name": "games-collection-backend",
   "version": "2023",
   "description": "",
-  "main": "movies-controller.mjs",
+  "main": "games-controller.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon movies-controller.mjs"
+    "start": "nodemon games-controller.mjs"
   },
   "author": "",
   "license": "ISC",
